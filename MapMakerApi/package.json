@@ -1,0 +1,25 @@
+{
+  "name": "MapMakerApi",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha public/* & mocha routes/* & node ./bin/www & mocha test/*"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "q": "^1.4.1",
+    "should": "^8.4.0",
+    "supertest": "^1.2.0"
+  }
+}
