@@ -15,6 +15,10 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
     "request": "^2.72.0"
   }
 }

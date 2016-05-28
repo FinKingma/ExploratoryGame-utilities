@@ -1,10 +1,10 @@
-function Map() {
+var Map = function(callback) {
     Map.lines = 13;
-    generateMap();
-}
-Map.prototype.constructor = Map;
+    generateMap(callback);
+};
 
-function generateMap() {
+
+function generateMap(callback) {
     $.ajax({
         type: "GET",
         url: "http://localhost:3000/api/mapmaker",
@@ -21,7 +21,7 @@ function generateMap() {
     function processData(data)
     {
         Map.grid = data;
-        return data;
+        callback(data);
     }
 }
 
