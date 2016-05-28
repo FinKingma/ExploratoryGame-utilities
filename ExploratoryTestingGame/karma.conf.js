@@ -16,8 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
         'http://code.jquery.com/jquery-latest.min.js',
-        'bower_components/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js',
-        'utils/pact_helper.js',
+        'utils/pact-consumer-js-dsl.js',
+       //'utils/pact_helper.js',
         'public/javascripts/map.js',
         'public/javascripts/map.spec.js'
     ],

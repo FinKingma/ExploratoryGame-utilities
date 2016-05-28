@@ -136,19 +136,8 @@ Pact.MockServiceRequests = Pact.MockServiceRequests || {};
 
   this.putInteractions = function(interactions, baseUrl, callback) {
     Pact.Http.makeRequest('PUT', baseUrl + '/interactions', JSON.stringify({interactions: interactions}), createResponseHandler('Pact interaction setup failed', callback));
-      //Pact.Http.makeRequest('PUT', 'http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/4.5.0', JSON.stringify({interactions: interactions}), createResponseHandler('send to pact broker failed', callback));
+      sendToBroker(interactions);
 
-      var xhr = new XMLHttpRequest();
-      var url = 'http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/5.5.0';
-      xhr.onload = function(event) {
-          console.log('succesfully send to pact broker.');
-      };
-      xhr.onerror = function() {
-          console.log('not so succesfully send to pact broker.');
-      };
-      xhr.open('PUT', url, true);
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.send(JSON.stringify({interactions: interactions}));
   };
 
   this.deleteInteractions = function(baseUrl, callback) {
@@ -336,3 +325,18 @@ Pact.Match = Pact.Match || {};
 }).apply(Pact.Match);
 return Pact;
 }));
+
+
+function sendToBroker(interactions) {
+    var xhr = new XMLHttpRequest();
+    var url = 'http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/5.5.0';
+    xhr.onload = function(event) {
+        console.log('succesfully send to pact broker.');
+    };
+    xhr.onerror = function() {
+        console.log('not so succesfully send to pact broker.');
+    };
+    xhr.open('PUT', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({interactions: interactions}));
+}
