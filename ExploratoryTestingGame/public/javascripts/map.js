@@ -11,8 +11,8 @@ function generateMap(callback) {
         dataType: "json",
         accepts: "application/json",
         headers: {
-            "features": "50",
-            "bugs": "20"
+            "features": "30",
+            "bugs": "4"
         },
         success: processData,
         error: function(){ return false;}

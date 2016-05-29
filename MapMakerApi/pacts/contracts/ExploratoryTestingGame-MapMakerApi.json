@@ -1,0 +1,106 @@
+{
+	"interactions": [
+		{
+			"description": "request for an awesome map",
+			"provider_state": "casual",
+			"request": {
+				"method": "get",
+				"path": "/api/mapmaker",
+				"headers": {
+					"features": "30",
+					"bugs": "4"
+				}
+			},
+			"response": {
+				"status": 200,
+				"body": {
+					"posY0": {
+						"posX0": {
+							"pathRight": {
+								"json_class": "Pact::Term",
+								"data": {
+									"generate": "Working",
+									"matcher": {
+										"json_class": "Regexp",
+										"o": 0,
+										"s": "^(Working|Broken)$"
+									}
+								}
+							},
+							"pathDown": {
+								"json_class": "Pact::Term",
+								"data": {
+									"generate": "Working",
+									"matcher": {
+										"json_class": "Regexp",
+										"o": 0,
+										"s": "^(Working|Broken)$"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	],
+	"updatedAt": "2016-05-29T13:55:08+00:00",
+	"createdAt": "2016-05-28T17:37:30+00:00",
+	"_links": {
+		"self": {
+			"title": "Pact",
+			"name": "Pact between ExploratoryTestingGame (v5.5.0) and MapMakerApi",
+			"href": "http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/5.5.0"
+		},
+		"pb:consumer": {
+			"title": "Consumer",
+			"name": "ExploratoryTestingGame",
+			"href": "http://localhost:8080/pacticipants/ExploratoryTestingGame"
+		},
+		"pb:provider": {
+			"title": "Provider",
+			"name": "MapMakerApi",
+			"href": "http://localhost:8080/pacticipants/MapMakerApi"
+		},
+		"pb:latest-pact-version": {
+			"title": "Pact",
+			"name": "Latest version of this pact",
+			"href": "http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/latest"
+		},
+		"pb:previous-distinct": {
+			"title": "Pact",
+			"name": "Previous distinct version of this pact",
+			"href": "http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/5.5.0/previous-distinct"
+		},
+		"pb:diff-previous-distinct": {
+			"title": "Diff",
+			"name": "Diff with previous distinct version of this pact",
+			"href": "http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/5.5.0/diff/previous-distinct"
+		},
+		"pb:pact-webhooks": {
+			"title": "Webhooks for the pact between ExploratoryTestingGame and MapMakerApi",
+			"href": "http://localhost:8080/webhooks/provider/MapMakerApi/consumer/ExploratoryTestingGame"
+		},
+		"pb:tag-prod-version": {
+			"title": "Tag this version as 'production'",
+			"href": "http://localhost:8080/pacticipants/ExploratoryTestingGame/versions/5.5.0/tags/prod"
+		},
+		"pb:tag-version": {
+			"title": "Tag version",
+			"href": "http://localhost:8080/pacticipants/ExploratoryTestingGame/versions/5.5.0/tags/{tag}"
+		},
+		"curies": [
+			{
+				"name": "pb",
+				"href": "http://localhost:8080/doc/{rel}",
+				"templated": true
+			}
+		]
+	},
+	"consumer": {
+		"name": "ExploratoryTestingGame"
+	},
+	"provider": {
+		"name": "MapMakerApi"
+	}
+}

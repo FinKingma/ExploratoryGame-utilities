@@ -178,7 +178,6 @@ Pact.MockService = Pact.MockService || {};
     }
 
     var _doneCallback = opts.done;
-
     var _pactDetails = {
       consumer: {
         name: opts.consumer
@@ -192,7 +191,7 @@ Pact.MockService = Pact.MockService || {};
     this.setup = function(callback) {
       // PUT the new interactions
       var interactions = _interactions;
-      _interactions = []; //Clean the local setup
+      //_interactions = []; //Clean the local setup
       Pact.MockServiceRequests.putInteractions(interactions, _baseURL, callback);
     };
 
