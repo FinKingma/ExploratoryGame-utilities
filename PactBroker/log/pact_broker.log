@@ -3575,3 +3575,17 @@ I, [2016-05-29T16:13:45.641844 #2074]  INFO -- : (0.000925s) SELECT * FROM `all_
 I, [2016-05-29T16:13:45.643273 #2074]  INFO -- : (0.000070s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 9)
 I, [2016-05-29T16:13:45.643487 #2074]  INFO -- : (0.000145s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
 I, [2016-05-29T16:13:45.643568 #2074]  INFO -- : (0.000735s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order > 5)) ORDER BY `consumer_version_order` LIMIT 1
+I, [2016-05-29T16:20:14.171403 #2074]  INFO -- : (0.000428s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\')) ORDER BY `consumer_version_order` DESC LIMIT 1
+I, [2016-05-29T16:20:14.171666 #2074]  INFO -- : (0.000075s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 9)
+I, [2016-05-29T16:20:14.171921 #2074]  INFO -- : (0.000167s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2016-05-29T16:20:14.908044 #2074]  INFO -- : (0.000268s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'ExploratoryTestingGame' ESCAPE '\') LIMIT 1
+I, [2016-05-29T16:20:14.908404 #2074]  INFO -- : (0.000180s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'MapMakerApi' ESCAPE '\') LIMIT 1
+I, [2016-05-29T16:20:14.909178 #2074]  INFO -- : (0.000058s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 9)
+I, [2016-05-29T16:20:14.909430 #2074]  INFO -- : (0.000164s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2016-05-29T16:20:14.909493 #2074]  INFO -- : (0.000750s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '5.5.0' ESCAPE '\')) LIMIT 1
+I, [2016-05-29T16:20:14.915966 #2074]  INFO -- : (0.000093s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 8)
+I, [2016-05-29T16:20:14.916337 #2074]  INFO -- : (0.000206s) SELECT * FROM `pact_version_contents` WHERE `sha` = '4253d7916e629114f23f467a6fa8d90c0b328fc5'
+I, [2016-05-29T16:20:14.916430 #2074]  INFO -- : (0.006546s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order < 6) AND (pact_version_content_sha != (SELECT `pact_version_content_sha` FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '5.5.0' ESCAPE '\')) LIMIT 1))) ORDER BY `consumer_version_order` DESC LIMIT 1
+I, [2016-05-29T16:20:14.917769 #2074]  INFO -- : (0.000064s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 9)
+I, [2016-05-29T16:20:14.918025 #2074]  INFO -- : (0.000153s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2016-05-29T16:20:14.918103 #2074]  INFO -- : (0.000835s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order > 5)) ORDER BY `consumer_version_order` LIMIT 1

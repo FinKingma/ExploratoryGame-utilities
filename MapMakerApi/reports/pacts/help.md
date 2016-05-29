@@ -26,7 +26,7 @@ The following changes have been made since the previous distinct version of this
 
 # Diff between versions 4.5.0 and 5.5.0 of the pact between ExploratoryTestingGame and MapMakerApi
 
-The following changes were made 19 minutes ago (Sun 29 May 2016, 3:55pm +02:00)
+The following changes were made 25 minutes ago (Sun 29 May 2016, 3:55pm +02:00)
 
 @@ -2,711 +2,23 @@
    "interactions": [

@@ -15,7 +15,11 @@ Contains the config settings to run PactBroker locally. To see how generation of
 The mockservice used to mock the provider services, so that ExploratoryTestingGame can run its unit tests and generate PACT files
 
 
-# Running Pact
+# Running Pact Consumer based
+To run pact for a consumer you will need:
+PactBroker to capture new PACTs
+Pact Mockservice to mock the provider
+haproxy to redirect your calls to the provider to your mockservice
 
 To get pact up and running:
 
@@ -62,9 +66,48 @@ run:
 ```shell
 karma start
 ```
-    
-    
+  
 If all goes well (so far it only worked on my machine... so fingers crossed), you will now have a network graph if you visit the following link:
 http://localhost:8080/groups/ExploratoryTestingGame
 
 You can also find your pacts if you visit http://localhost:8080 in a browser.
+    
+
+
+# Running Pact Provider based
+To run pact for a provider you will need:
+PactBroker to call for PACTs
+Your running provider service
+
+## 1. Run the PactBroker
+navigate to the PactBroker directory
+
+run:
+```shell
+bundle
+```
+
+run:
+```shell
+bundle exec rackup -p 8080
+```
+    
+Check to see if the service is running by sending a postman request to 'http://localhost:8080/' or opening it on a website.
+Note: the website fails to open if there are no pact files present.
+
+## 2. Run the MapMakerApi service
+navigate to the MapMakerApi directory
+
+run:
+```shell
+npm run start
+```
+
+
+## 3. Run the service pact tests
+navigate to the MapMakerApi directory
+
+run:
+```shell
+npm run pact
+```
