@@ -96,6 +96,14 @@ Check to see if the service is running by sending a postman request to 'http://l
 Note: the website fails to open if there are no pact files present.
 
 ## 2. Run the MapMakerApi service
+navigate to the MapMakerApi directory -> node_modules -> pact-js-provider
+
+run:
+```shell
+bundle install
+```
+
+
 navigate to the MapMakerApi directory
 
 run:
