@@ -13,7 +13,7 @@ var consumer = process.env.CONSUMER;
 pactJs.timeout = 4000;
 
 //Bij grotere projecten (meerdere providers / consumers) moet het onderstaande gerund worden voor iedere consumer bij de geselecteerde provider.
-var pactURL = 'http://localhost:8080/pacts/provider/'+provider+'/consumer/'+consumer+'/latest';
+var pactURL = 'http://192.168.99.100:80/pacts/provider/'+provider+'/consumer/'+consumer+'/latest';
 //pactJs.runPact('./pacts/tests/'+consumer+'-'+provider+'.js');
 
 exec('curl '+pactURL,

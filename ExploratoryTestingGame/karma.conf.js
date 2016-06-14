@@ -19,7 +19,9 @@ module.exports = function(config) {
         'utils/pact-consumer-js-dsl.js',
        //'utils/pact_helper.js',
         'public/javascripts/map.js',
-        'public/javascripts/map.spec.js'
+        'public/javascripts/map.spec.js',
+        'public/javascripts/discoverables.js',
+        'public/javascripts/discoverables.spec.js'
     ],
 
 

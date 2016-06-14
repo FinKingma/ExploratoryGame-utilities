@@ -7,51 +7,6 @@
   },
   "interactions": [
     {
-      "description": "request for an awesome map 2",
-      "provider_state": "casual",
-      "request": {
-        "method": "get",
-        "path": "/api/mapmaker",
-        "headers": {
-          "features": "30",
-          "bugs": "4"
-        }
-      },
-      "response": {
-        "status": 200,
-        "headers": {
-        },
-        "body": {
-          "posY0": {
-            "posX0": {
-              "pathRight": {
-                "json_class": "Pact::Term",
-                "data": {
-                  "generate": "Working",
-                  "matcher": {
-                    "json_class": "Regexp",
-                    "o": 0,
-                    "s": "^(Working|Broken)$"
-                  }
-                }
-              },
-              "pathDown": {
-                "json_class": "Pact::Term",
-                "data": {
-                  "generate": "Working",
-                  "matcher": {
-                    "json_class": "Regexp",
-                    "o": 0,
-                    "s": "^(Working|Broken)$"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    {
       "description": "request for an awesome map",
       "provider_state": "casual",
       "request": {

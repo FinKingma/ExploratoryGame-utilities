@@ -1,8 +1,25 @@
 body {
   padding: 0px;
   margin:0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 a {
   color: #00B7FF;
+}
+
+#game {
+  display:inline-block;
+}
+
+#scorecard {
+  display:inline-block;
+  vertical-align: top;
+  padding: 20px;
+}
+
+h1 {
+  padding: 0px;
+  margin:0px;
 }

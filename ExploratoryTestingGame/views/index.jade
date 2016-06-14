@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  a(href="/game") play
+    h1= title
+    form(action="/game", method="post")
+        select(name='controls')
+            each control, i in controls
+                option(value=control, name=control) use #{control}
+        input(type="submit", value="Play")

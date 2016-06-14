@@ -49,27 +49,35 @@ goal.defineGoal = function(data) {
     switch(luckyNumber) {
         case 0: //LU
             data["posY0"]["posX3"]["Goal"] = true;
+            console.log('Goal @ left up');
             break;
         case 1: //LD
             data["posY0"]["posX9"]["Goal"] = true;
+            console.log('Goal @ left down');
             break;
         case 2: //RU
             data["posY12"]["posX3"]["Goal"] = true;
+            console.log('Goal @ right up');
             break;
         case 3: //RD
             data["posY12"]["posX9"]["Goal"] = true;
+            console.log('Goal @ right down');
             break;
         case 4: //UL
             data["posY3"]["posX0"]["Goal"] = true;
+            console.log('Goal @ up left');
             break;
         case 5: //UR
             data["posY9"]["posX0"]["Goal"] = true;
+            console.log('Goal @ up right');
             break;
         case 6: //DL
             data["posY3"]["posX12"]["Goal"] = true;
+            console.log('Goal @ down left');
             break;
         case 7: //DR
             data["posY9"]["posX12"]["Goal"] = true;
+            console.log('Goal @ down right');
             break;
     }
     return data;
