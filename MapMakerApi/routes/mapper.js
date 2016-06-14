@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var mapmaker = require('./../public/javascripts/map');
-var Q = require('q');
 
 router.get('/', function(req, res, next) {
   var features = req.header('features');

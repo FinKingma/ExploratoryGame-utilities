@@ -1,1 +1,0 @@
-Sequel.require 'adapters/postgres'

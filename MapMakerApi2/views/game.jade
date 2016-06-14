@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  input(type="hidden" id="controls" value="#{controls}")
+  canvas#gamestage
+  script(src='http://code.jquery.com/jquery-latest.min.js')
+  script(src='/javascripts/discoverables.js')
+  script(src='/javascripts/goal.js')
+  script(src='/javascripts/map.js')
+  script(src='/javascripts/hero.js')
+  script(src='/javascripts/scorecard.js')
+  script(src='/javascripts/stage.js')
+  script(src='/javascripts/timebox.js')
+
+  div(id="scorecard")
+   h1(id="title")
+   h3(id="header")
+   h2(id="achieved")
+   p(id="timebox")
+   p(id="bugs")
+   p(id="features")
+   p(id="explored")

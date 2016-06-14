@@ -1,9 +1,0 @@
-coverage/*
-pkg/*
-rdoc/*
-gbin
-vendor
-.bundle
-Gemfile.lock
-.rvmrc
-
