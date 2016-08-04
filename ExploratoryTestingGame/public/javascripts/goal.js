@@ -1,16 +1,24 @@
 function Goal(goalPos) {
     Goal.x = goalPos.x;
     Goal.y = goalPos.y;
-    Goal.size = 40;
+    Goal.size = 10;
+
 }
 
 Goal.draw = function(context,width,height,margin) {
-    var context = context;
     Goal.sw = width - (margin*2);
     Goal.sh = height - (margin*2);
     Goal.margin = margin;
+    Goal.size = (Goal.sw/10);
 
-    context.beginPath();
+    $('#goal').css('background-size',Goal.size+'px ' + Goal.size+'px');
+    $('#goal').css('width',Goal.size+'px');
+    $('#goal').css('height',Goal.size+'px');
+    $('#goal').css('left',(Goal.sw/12)*Goal.x + Goal.margin - (Goal.size/2)+'px');
+    $('#goal').css('top',(Goal.sh/12)*Goal.y + Goal.margin - (Goal.size)+'px');
+
+
+    /*context.beginPath();
     var grd=context.createRadialGradient(
         (Goal.sw/12)*Goal.x,
         (Goal.sh/12)*Goal.y,
@@ -28,5 +36,5 @@ Goal.draw = function(context,width,height,margin) {
 
 
     context.fillStyle = grd;
-    context.fill();
+    context.fill();*/
 };

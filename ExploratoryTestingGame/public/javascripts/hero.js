@@ -28,7 +28,6 @@ function Hero(controls, gameWidth) {
 
     switch(controls) {
         case "keyboard":
-            console.log('yeeey');
             $("body").keydown(function(e) {
                 ek = e.keyCode;
                 if (ek==37) movLeft=1;
@@ -50,17 +49,65 @@ function Hero(controls, gameWidth) {
                 mouseY = event.pageY;
             });
             break;
+        case "touch":
+            $("body").on('touchstart', '#gamestage', function(e) {
+                mouseX = e.originalEvent.touches[0].pageX;
+                mouseY = e.originalEvent.touches[0].pageY;
+            });
     }
 }
 
 Hero.draw = function(context,width,height,margin) {
     moveHero(context);
-    Map.context.lineWidth = 3;
+
+    var realX = Hero.x * Hero.percentageX;
+    var realY = Hero.y * Hero.percentageY;
+
+    Map.context.lineWidth = 4;
     Map.context.beginPath();
     context.beginPath();
-    context.arc(Hero.x * Hero.percentageX, Hero.y * Hero.percentageY, Hero.size, 0, 2 * Math.PI, false);
-    context.strokeStyle = "blue";
+    context.arc(realX, realY, Hero.size, 0, 2 * Math.PI, false);
+
+    var grd=context.createRadialGradient(realX,realY,Hero.size-2,realX+2,realY+2,Hero.size+2);
+    grd.addColorStop(0,"black");
+    grd.addColorStop(.5,"darkblue");
+    grd.addColorStop(1,"#c3c3c3");
+
+    context.strokeStyle = grd;
     context.stroke();
+    context.beginPath();
+
+    //draw triangle in the direction
+    var direction = Math.atan2(Hero.speedY,Hero.speedX) * 180/Math.PI;
+    //console.log(direction);
+
+    //startpos of line
+    context.moveTo(
+        (Math.cos(direction / (180/Math.PI)) * Hero.size) + realX,
+        (Math.sin(direction / (180/Math.PI)) * Hero.size) + realY
+    );
+
+
+    //little degrees up
+    context.lineTo(
+        (Math.cos((direction+45) / (180/Math.PI)) * Hero.size) + realX,
+        (Math.sin((direction+45) / (180/Math.PI)) * Hero.size) + realY
+    );
+
+    //pointy part
+    context.lineTo(
+        (Math.cos(direction / (180/Math.PI)) * (Hero.size*1.5)) + realX,
+        (Math.sin(direction / (180/Math.PI)) * (Hero.size*1.5)) + realY
+    );
+
+    //little degrees up
+    context.lineTo(
+        (Math.cos((direction-45) / (180/Math.PI)) * Hero.size) + realX,
+        (Math.sin((direction-45) / (180/Math.PI)) * Hero.size) + realY
+    );
+
+    context.fillStyle = "darkblue";
+    context.fill();
 };
 
 function moveHero(context) {
@@ -83,13 +130,18 @@ function moveHero(context) {
     Hero.speedY /= Hero.friction;
 
     var pixelX = context.getImageData(((Hero.x*Hero.percentageX) + Hero.speedX) | 0, (Hero.y*Hero.percentageY) | 0, 1, 1).data;
-    if (pixelX[0] === 0 && pixelX[1] === 0) {
+    //if pixel is not background
+    if (!(pixelX[0] > 80 && pixelX[0] < 155 &&
+        pixelX[1] > 163 && pixelX[1] < 203 &&
+        pixelX[2] > 163 && pixelX[2] < 203)) {
         Hero.x += Hero.speedX;
     }
 
     //check for movement Y
     var pixelY = context.getImageData((Hero.x*Hero.percentageX) | 0, ((Hero.y*Hero.percentageY) + Hero.speedY) | 0, 1, 1).data;
-    if (pixelY[0] === 0 && pixelY[1] === 0) {
+    if (!(pixelY[0] > 80 && pixelY[0] < 155 &&
+        pixelY[1] > 163 && pixelY[1] < 203 &&
+        pixelY[2] > 163 && pixelY[2] < 203)) {
         Hero.y += Hero.speedY;
     }
 

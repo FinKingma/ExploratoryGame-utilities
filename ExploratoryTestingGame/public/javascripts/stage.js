@@ -1,33 +1,18 @@
-var margin = 20;
+var margin = window.innerWidth/15;
 var scorecardWidth = .3;
 var gameWidth = .7;
-var play;
-
 var timebox = 30;
 
-//var goal = new Goal();
-var seconds = 3;
-var tempStage = Stage();
-tempStage.context.font="20px Georgia";
-tempStage.context.fillText("GET READY!",window.innerWidth / 2,(window.innerHeight / 2)-100);
-tempStage.context.fillText("3",window.innerWidth / 2,window.innerHeight / 2);
+var play;
 var totalDiscoverables;
 var currentDiscoverables;
-
-var tensionTimer = setInterval(function() {
-    seconds--;
-    tempStage.context.rect(0,0,window.innerWidth,window.innerHeight);
-    tempStage.context.fillStyle = 'rgba(255, 255, 255, 1)';
-    tempStage.context.fill();
-    tempStage.context.fillStyle = 'rgba(0, 0, 0, 1)';
-    tempStage.context.fillText("GET READY!",window.innerWidth / 2,(window.innerHeight / 2)-100);
-    tempStage.context.fillText(seconds,window.innerWidth / 2,window.innerHeight / 2);
-
-    if (seconds === 0) {
-        clearInterval(tensionTimer);
+var tempStage = Stage();
+tempStage.canvas.width = tempStage.sw = window.innerWidth;
+$(document).ready(function() {
+    GetReadyStage(tempStage, function() {
         startGame();
-    }
-},1000);
+    });
+});
 
 function startGame() {
     console.log('generating a new map');
@@ -47,7 +32,7 @@ function startGame() {
                 },25);
                 timer = setInterval(function() {
                     if (Scorecard.timeboxTick()) {
-                        endSession(false);
+                        endSession(false, Discoverables.BugsFound, Discoverables.FeaturesFound, scorecard.exploredPercentage);
                         clearInterval(timer);
                     }
                 },1000);
@@ -64,7 +49,9 @@ function getInitialMapData(callback) {
 
     totalDiscoverables = 0;
     for (var i=0;i<(startingCanvasData.length/4);i++) {
-        if (startingCanvasData[(i*4)] !== 150 && startingCanvasData[(i*4)+1] !== 200 && startingCanvasData[(i*4)+2] !== 200) {
+        if (!(startingCanvasData[(i*4)] > 80 && startingCanvasData[(i*4)] < 155 &&
+            startingCanvasData[(i*4)+1] > 163 && startingCanvasData[(i*4)+1] < 203 &&
+            startingCanvasData[(i*4)+2] > 163 && startingCanvasData[(i*4)+2] < 203)) {
             totalDiscoverables++;
         }
     }
@@ -138,11 +125,11 @@ function checkForPickups() {
                                 if (dist <= Hero.size) {
                                     if (Map.grid[keyY][keyX][property] === 'Feature') {
                                         Map.grid[keyY][keyX][property] = 'FeatureFound';
-                                        Discoverables.discoverFeature();
+                                        Discoverables.discoverFeature(Scorecard);
                                     }
                                     if (Map.grid[keyY][keyX][property] === 'Broken') {
                                         Map.grid[keyY][keyX][property] = 'BugFound';
-                                        Discoverables.discoverBug();
+                                        Discoverables.discoverBug(Scorecard);
                                     }
                                 }
                             }
@@ -156,8 +143,8 @@ function checkForPickups() {
     var distX = Math.abs((Hero.x*Hero.percentageX) - (((Goal.sw/12)*Goal.x)+Goal.margin));
     var distY = Math.abs((Hero.y*Hero.percentageY) - (((Goal.sh/12)*Goal.y)+Goal.margin));
     dist = Math.sqrt(Math.pow(distX,2) + Math.pow(distY,2));
-    if (dist <= (Goal.size + (Hero.size/2))) {
-        endSession(true);
+    if (dist <= ((Goal.size/2) + (Hero.size/2))) {
+        endSession(true, Discoverables.BugsFound, Discoverables.FeaturesFound, scorecard.exploredPercentage);
     }
 }
 
@@ -181,7 +168,9 @@ function drawStage(stage) {
 
     currentDiscoverables = 0;
     for (var j=0;j<(canvasData.length/4);j++) {
-        if (canvasData[(j*4)] !== 150 && canvasData[(j*4)+1] !== 200 && canvasData[(j*4)+2] !== 200) {
+        if (!(canvasData[(j*4)] > 80 && canvasData[(j*4)] < 155 &&
+            canvasData[(j*4)+1] > 163 && canvasData[(j*4)+1] < 203 &&
+            canvasData[(j*4)+2] > 163 && canvasData[(j*4)+2] < 203)) {
             currentDiscoverables++;
         }
     }
@@ -207,14 +196,16 @@ function drawStage(stage) {
 
 function drawBackground(stage) {
     if (stage) {
-        stage.context.rect(0,0,stage.sw,stage.sh);
-        stage.context.fillStyle = 'rgba(150, 200, 200, 0.8)';
-        stage.context.fill();
+        var my_gradient=stage.context.createLinearGradient(0,0,0,stage.sh);
+        my_gradient.addColorStop(0,'rgba(154,202,202,0.8)');
+        my_gradient.addColorStop(1,'rgba(81,164,164,0.8)');
+        stage.context.fillStyle=my_gradient;
+        stage.context.fillRect(0,0,stage.sw,stage.sh);
     }
 }
 
-function endSession(achieved) {
+function endSession(achieved, features, bugs, explored) {
     if (play) clearInterval(play);
     if (timer) clearInterval(timer);
-    Scorecard.end(achieved);
+    Scorecard.end(achieved, features, bugs, explored);
 }

@@ -88,13 +88,14 @@ Map.getGoal = function(callback) {
 };
 
 function drawHorizontalLine(posY,posX,type) {
-    defineColor(type);
 
     Map.context.beginPath();
     Map.context.lineWidth = 5;
     var lineX = (posX * (Map.sw / (Map.lines-1)))+Map.margin;
     var lineY = (posY * (Map.sh / (Map.lines-1)))+Map.margin;
     var lineLength = (Map.sw/(Map.lines-1));
+    defineColor(type, lineX, lineY, 'horizontal');
+
     Map.context.moveTo(lineX,lineY);
 
     if (type === "Broken" || type === "BugFound") {
@@ -112,47 +113,68 @@ function drawHorizontalLine(posY,posX,type) {
     Map.context.stroke();
 }
 function drawVerticalLine(posY,posX,type) {
-    defineColor(type);
 
     Map.context.beginPath();
     Map.context.lineWidth = 5;
     var lineX = (posX * (Map.sw / (Map.lines-1)))+Map.margin;
     var lineY = (posY * (Map.sh / (Map.lines-1)))+Map.margin;
     var lineLength = (Map.sh/(Map.lines-1));
+    defineColor(type, lineX, lineY, 'vertical');
 
     Map.context.moveTo(lineX, lineY);
 
     if (type === "Broken" || type === "BugFound") {
-        var breakSize = Map.sh / Map.lines-40;
-        Map.context.lineTo(lineX+breakSize,lineY + (lineLength/7));
-        Map.context.lineTo(lineX-breakSize,lineY + (lineLength/5));
+        var breakSize = Map.sh / Map.lines - 40;
+        Map.context.lineTo(lineX + breakSize, lineY + (lineLength / 7));
+        Map.context.lineTo(lineX - breakSize, lineY + (lineLength / 5));
         Map.context.stroke();
 
         Map.context.beginPath();
-        Map.context.moveTo(lineX +breakSize,lineY+ (lineLength/1.5));
-        Map.context.lineTo(lineX -breakSize,lineY+ (lineLength/1.2));
+        Map.context.moveTo(lineX + breakSize, lineY + (lineLength / 1.5));
+        Map.context.lineTo(lineX - breakSize, lineY + (lineLength / 1.2));
     }
 
     Map.context.lineTo(lineX, lineY + lineLength);
     Map.context.stroke();
 }
 
-function defineColor(type) {
+function defineColor(type,lineX,lineY,dir) {
+    var grad;
+    if (dir === 'vertical') {
+        grad= Map.context.createLinearGradient(lineX-2.5, lineY, lineX+2.5, lineY);
+    } else {
+        grad= Map.context.createLinearGradient(lineX, lineY-2.5, lineX, lineY+2.5);
+    }
     switch(type) {
         case "Working":
-            Map.context.strokeStyle = "black";
+            grad.addColorStop(0, "black");
+            grad.addColorStop(0.1, "#999");
+            grad.addColorStop(0.3, "black");
+            grad.addColorStop(0.7, "black");
+            grad.addColorStop(1, "#fff");
+            Map.context.strokeStyle = grad;
             break;
         case "Feature":
-            Map.context.strokeStyle = "blue";
+            grad.addColorStop(0, "blue");
+            grad.addColorStop(0.1, "#999");
+            grad.addColorStop(0.3, "blue");
+            grad.addColorStop(0.7, "blue");
+            grad.addColorStop(1, "#fff");
+            Map.context.strokeStyle = grad;
             break;
         case "FeatureFound":
-            Map.context.strokeStyle = "darkblue";
+            grad.addColorStop(0, "black");
+            grad.addColorStop(0.1, "#999");
+            grad.addColorStop(0.3, "black");
+            grad.addColorStop(0.7, "black");
+            grad.addColorStop(1, "#fff");
+            Map.context.strokeStyle = grad;
             break;
         case "Broken":
             Map.context.strokeStyle = "red";
             break;
         case "BugFound":
-            Map.context.strokeStyle = "darkred";
+            Map.context.strokeStyle = "black";
             break;
     }
 }

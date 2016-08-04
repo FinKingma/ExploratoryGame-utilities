@@ -18,6 +18,7 @@ module.exports = function(config) {
         'http://code.jquery.com/jquery-latest.min.js',
         'utils/pact-consumer-js-dsl.js',
        //'utils/pact_helper.js',
+        'public/javascripts/scorecard.js',
         'public/javascripts/map.js',
         'public/javascripts/map.spec.js',
         'public/javascripts/discoverables.js',

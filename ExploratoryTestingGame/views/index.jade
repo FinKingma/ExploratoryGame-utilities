@@ -1,9 +1,13 @@
 extends layout
 
 block content
-    h1= title
-    form(action="/game", method="post")
-        select(name='controls')
-            each control, i in controls
-                option(value=control, name=control) use #{control}
-        input(type="submit", value="Play")
+    link(href='https://fonts.googleapis.com/css?family=Della+Respira|Quattrocento|Halant:400,300|David+Libre|Roboto+Condensed|Raleway', rel='stylesheet', type='text/css')
+    div(id="background")
+        div(id="welcome")
+            h1= title
+            form(action="/game", method="post")
+                input(type="hidden" name="skipWait", id="skipWait" value="#{skipWait}")
+                select(name="controls", id="controls")&#x25BC;
+                    each control, i in controls
+                        option(value=control, name=control) use #{control}
+                input(type="submit", value="Play", id="play")
