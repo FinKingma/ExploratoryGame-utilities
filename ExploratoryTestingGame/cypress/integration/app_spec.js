@@ -11,16 +11,16 @@ describe('ET game', function(){
         cy.visit("http://localhost:2000");
     })
 
-    it('should have control options', function(){
+    xit('should have control options', function(){
         cy.get('#controls').should('contain', 'use keyboard');
         cy.get('#controls').should('contain', 'use mouse');
     });
 
-    it('can select mouse', function(){
+    xit('can select mouse', function(){
         cy.get('#controls').select('use mouse');
     });
 
-    it('contains a wait for it', function(){
+    xit('contains a wait for it', function(){
         cy
             .clock()
             .get('#play').click()

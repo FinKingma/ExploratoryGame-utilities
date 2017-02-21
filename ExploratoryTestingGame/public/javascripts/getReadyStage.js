@@ -1,9 +1,5 @@
 function GetReadyStage(stage, callback) {
     var seconds = 5;
-    var skipWait = $("#skipWait").val();
-    if (skipWait == 'true') {
-        seconds = 1;
-    }
 
     var my_gradient=stage.context.createLinearGradient(0,0,0,stage.sh);
     my_gradient.addColorStop(0,'rgba(154,202,202,0.8)');

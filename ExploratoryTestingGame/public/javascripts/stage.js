@@ -2,10 +2,6 @@ var margin = window.innerWidth/15;
 var scorecardWidth = .3;
 var gameWidth = .7;
 var timebox = 30;
-var skipWait = $("#skipWait").val();
-if (skipWait == 'true') {
-    timebox = 1;
-}
 
 var play;
 var totalDiscoverables;
@@ -35,6 +31,7 @@ function startGame() {
                     renderStage();
                 },25);
                 timer = setInterval(function() {
+                    timebox--;
                     if (Scorecard.timeboxTick()) {
                         endSession(false, Discoverables.BugsFound, Discoverables.FeaturesFound, scorecard.exploredPercentage);
                         clearInterval(timer);
