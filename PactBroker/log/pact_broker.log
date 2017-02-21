@@ -5784,3 +5784,25 @@ I, [2017-02-21T15:10:27.271067 #32955]  INFO -- : (0.000760s) SELECT * FROM `all
 I, [2017-02-21T15:10:27.272334 #32955]  INFO -- : (0.000049s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 9)
 I, [2017-02-21T15:10:27.272540 #32955]  INFO -- : (0.000143s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
 I, [2017-02-21T15:10:27.272599 #32955]  INFO -- : (0.000641s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order > 5)) ORDER BY `consumer_version_order` LIMIT 1
+I, [2017-02-21T15:21:31.750838 #33021]  INFO -- : Migrating database
+I, [2017-02-21T15:21:31.755745 #33021]  INFO -- : (0.000447s) PRAGMA foreign_keys = 1
+I, [2017-02-21T15:21:31.755845 #33021]  INFO -- : (0.000045s) PRAGMA case_sensitive_like = 1
+I, [2017-02-21T15:21:31.755993 #33021]  INFO -- : (0.000099s) SELECT sqlite_version()
+I, [2017-02-21T15:21:31.756267 #33021]  INFO -- : (0.000053s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2017-02-21T15:21:31.756526 #33021]  INFO -- : (0.000109s) SELECT * FROM `schema_info` LIMIT 1
+I, [2017-02-21T15:21:31.756689 #33021]  INFO -- : (0.000053s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2017-02-21T15:21:31.756974 #33021]  INFO -- : (0.000077s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2017-02-21T15:21:31.757201 #33021]  INFO -- : (0.000076s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2017-02-21T15:21:31.757378 #33021]  INFO -- : Mounting HAL browser
+I, [2017-02-21T15:21:31.757412 #33021]  INFO -- : Mounting UI
+I, [2017-02-21T15:21:31.933828 #33021]  INFO -- : (0.000258s) PRAGMA table_info('pacticipants')
+I, [2017-02-21T15:21:31.935965 #33021]  INFO -- : (0.000110s) PRAGMA table_info('tags')
+I, [2017-02-21T15:21:31.937578 #33021]  INFO -- : (0.000164s) PRAGMA table_info('versions')
+I, [2017-02-21T15:21:31.942816 #33021]  INFO -- : (0.000253s) PRAGMA table_info('pact_version_contents')
+I, [2017-02-21T15:21:31.943896 #33021]  INFO -- : (0.000125s) PRAGMA table_info('pacts')
+I, [2017-02-21T15:21:31.945660 #33021]  INFO -- : (0.000192s) PRAGMA table_info('all_pacts')
+I, [2017-02-21T15:21:31.947686 #33021]  INFO -- : (0.000286s) PRAGMA table_info('latest_pacts')
+I, [2017-02-21T15:21:31.948649 #33021]  INFO -- : (0.000274s) PRAGMA table_info('latest_tagged_pacts')
+I, [2017-02-21T15:21:32.042917 #33021]  INFO -- : (0.000245s) PRAGMA table_info('webhooks')
+I, [2017-02-21T15:21:32.044596 #33021]  INFO -- : (0.000108s) PRAGMA table_info('webhook_headers')
+I, [2017-02-21T15:21:32.063887 #33021]  INFO -- : Mounting PactBroker::API
