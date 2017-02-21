@@ -9,8 +9,8 @@
       <ignores>0</ignores>
       <exceptions>0</exceptions>
     </counts>
-    <date>2016-08-08T10:29:02+02:00</date>
-    <runTimeInMillis>104</runTimeInMillis>
+    <date>2017-02-21T15:08:55+01:00</date>
+    <runTimeInMillis>162</runTimeInMillis>
     <content>&lt;br/&gt;&lt;table&gt;
 	&lt;tr class="slimRowTitle"&gt;
 		&lt;td&gt;import&lt;/td&gt;
@@ -182,6 +182,6 @@
     <ignores>0</ignores>
     <exceptions>0</exceptions>
   </finalCounts>
-  <totalRunTimeInMillis>320</totalRunTimeInMillis>
+  <totalRunTimeInMillis>407</totalRunTimeInMillis>
 </testResults>
 

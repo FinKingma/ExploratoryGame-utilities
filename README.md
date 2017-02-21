@@ -2,20 +2,26 @@
 
 ## ExploratoryTestingGame
 This is the game itself. Containing HTML5 webpage to play.
-Unfortunately I'm refactoring the code, so it only loads the map. No player or whatever.
+Test tools:
+- Technical Unit Tests. Karma "npm run karma" (also used for generating pact contracts). Requires PactBroker and PactMock to be running.
+- Technical UI Tests. Cypress "npm run cypress".
+- Functional Tests. TBD.
 
 ## MapMakerApi 
 This is the api service to generate random maps for the game.
-This part is furthest along development.
+Test tools:
+- Technical Unit Tests. Mocha "npm run mocha".
+- Consumer driven contract tests. Pact "npm run pact".
+- Functional Tests. fitnesse "npm run fitnesse".
 
-##  PactBroker 
+## PactBroker 
 Contains the config settings to run PactBroker locally. To see how generation of pact files work
 
 ## PactMock 
 The mockservice used to mock the provider services, so that ExploratoryTestingGame can run its unit tests and generate PACT files
 
 
-# Running Pact Consumer based
+# Running Pact Tests
 To run pact for a consumer you will need:
 PactBroker to capture new PACTs
 Pact Mockservice to mock the provider
@@ -23,96 +29,40 @@ haproxy to redirect your calls to the provider to your mockservice
 
 To get pact up and running:
 
-## 1. Run the PactBroker
+## 1. Launch the PactBroker
 navigate to the PactBroker directory
 
 run:
 ```shell
-bundle
-```
-
-run:
-```shell
-bundle exec rackup -p 8080
+./start-broker.sh
 ```
     
-Check to see if the service is running by sending a postman request to 'http://localhost:8080/' or opening it on a website.
-Note: the website fails to open if there are no pact files present.
+Open http://localhost:8080 to check if PactBroker is up and running.
 
 
-## 2. Run the mockservice
+## 2. Launch the pact mockservice
 navigate to the PactMock directory
 
 run:
 ```shell
-bundle exec pact-mock-service start -p 1234 -l tmp/pact.log --pact-dir tmp/pacts
+./start-mock.sh
 ```
 
-
-## 3. Run haproxy
-navigate to the PactMock directory again
-
-run:
-```shell
-haproxy -f localproxy.cfg
-```
-    
+Open http://localhost:1234 to check if you receive an OK (200) response.
   
     
-## 4. Run the awesome test
+## 3. Generate pact contracts from consumer
 navigate to ExploratoryTestingGame
 
 run:
 ```shell
-karma start
-```
-  
-If all goes well (so far it only worked on my machine... so fingers crossed), you will now have a network graph if you visit the following link:
-http://localhost:8080/groups/ExploratoryTestingGame
-
-You can also find your pacts if you visit http://localhost:8080 in a browser.
-    
-
-
-# Running Pact Provider based
-To run pact for a provider you will need:
-PactBroker to call for PACTs
-Your running provider service
-
-## 1. Run the PactBroker
-navigate to the PactBroker directory
-
-run:
-```shell
-bundle
+npm run karma
 ```
 
-run:
-```shell
-bundle exec rackup -p 8080
-```
-    
-Check to see if the service is running by sending a postman request to 'http://localhost:8080/' or opening it on a website.
-Note: the website fails to open if there are no pact files present.
-
-## 2. Run the MapMakerApi service
-navigate to the MapMakerApi directory -> node_modules -> pact-js-provider
-
-run:
-```shell
-bundle install
-```
+You can find your pacts if you visit http://localhost:8080 in a browser.
 
 
-navigate to the MapMakerApi directory
-
-run:
-```shell
-npm run start
-```
-
-
-## 3. Run the service pact tests
+## 4. Test your pact contracts with your provider service
 navigate to the MapMakerApi directory
 
 run:
