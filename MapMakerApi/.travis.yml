@@ -1,0 +1,20 @@
+language: node_js
+before_install:
+- sudo apt-get install checkinstall
+- wget -c http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz
+- tar -xzf ruby-2.0.0-p0.tar.gz
+- cd ruby-2.0.0-p0
+- ./configure   
+- make
+- sudo nano /etc/environment
+- PATH="/usr/local/ruby/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+- source /etc/environment
+- ruby -v
+install: 
+- gem install bundler
+- bundle --version
+- npm install
+script:
+- npm run pact
+after_success:
+- echo "huuray!"

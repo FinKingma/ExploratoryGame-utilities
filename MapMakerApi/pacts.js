@@ -1,35 +1,80 @@
-process.env.PROVIDER = 'MapMakerApi';
-process.env.CONSUMER = 'ExploratoryTestingGame';
 if (!process.env.PROVIDER) throw new Error('use environment variable PROVIDER to specify a provider for this testrun!');
-if (!process.env.CONSUMER) throw new Error('use environment variable CONSUMER to specify a consumer for this testrun!');
+if (!process.env.PROVIDERURL) throw new Error('use environment variable PROVIDERURL to specify the provider environment for this testrun!');
+if (!process.env.PACTBROKERURL) throw new Error('use environment variable PACTBROKERURL to specify the environment of pact broker!');
 
 var pactJs = require('./utils/pact_overrider.js');
 var fs = require('fs');
 var exec = require('child_process').exec;
 
 var provider = process.env.PROVIDER;
-var consumer = process.env.CONSUMER;
+var pactUrl = 'http://' + process.env.PACTBROKERURL;
+var pactProviderUrl = pactUrl+'/pacts/provider/'+provider + '/latest';
 
-pactJs.timeout = 4000;
+pactJs.timeout = 60000;
 
-//Bij grotere projecten (meerdere providers / consumers) moet het onderstaande gerund worden voor iedere consumer bij de geselecteerde provider.
-var pactURL = 'http://192.168.99.100:80/pacts/provider/'+provider+'/consumer/'+consumer+'/latest';
-//pactJs.runPact('./pacts/tests/'+consumer+'-'+provider+'.js');
+function runPact(consumer,provider) {
+    console.log('running for ./pacts/tests/'+consumer.name+'-'+provider+'.js');
+    pactJs.runPact('./pacts/tests/'+consumer.name+'-'+provider+'.js');
+}
 
-exec('curl '+pactURL,
-    function (error, stdout, stderr) {
-        if (error !== null) throw error;
+function savePact(data, consumer) {
+    var dataJson;
+    try {
+        dataJson = JSON.parse(data);
+    }
+    catch(err) {
+        throw err;
+    }
+    if (!dataJson.consumer) dataJson.consumer = {"name":consumer.name};
+    if (!dataJson.provider) dataJson.provider = {"name":provider};
 
-        var dataJson = JSON.parse(stdout);
-        dataJson.consumer = {"name":consumer};
-        dataJson.provider = {"name":provider};
+    var prettyPlease = JSON.stringify(dataJson,null,"\t");
 
-        var prettyPlease = JSON.stringify(dataJson,null,"\t");
+    fs.writeFile('pacts/contracts/'+consumer.name+'-'+provider+'.json', prettyPlease, function(err) {
+        if (err) throw err;
+        console.log('Latest pact file succesfully retrieved + saved!');
 
-        fs.writeFile('pacts/contracts/'+consumer+'-'+provider+'.json', prettyPlease, function(err) {
+        fs.access('./pacts/tests/'+consumer.name+'-'+provider+'.js', fs.F_OK, function(err) {
             if (err) throw err;
-            console.log('Latest pact file succesfully retrieved + saved!');
-
-            pactJs.runPact('./pacts/tests/'+consumer+'-'+provider+'.js');
         });
+
+        runPact(consumer,provider);
     });
+}
+
+function checkPacts(err, stdout, stderr) {
+    if (err) {
+        console.log('error found...');
+        throw err;
+    }
+
+    var dataJson;
+
+    try {
+        dataJson = JSON.parse(stdout);
+    } catch(err) {
+        console.log("the response from the pactbroker server could not be translated to a json object:\n");
+        console.log(stdout);
+        return;
+    }
+
+    var pacts = dataJson._links.pacts;
+
+    if (pacts.length === 0) {
+        console.log('no pact files found.');
+    }
+    
+    pacts.forEach(function(consumer) {
+        exec('curl '+consumer.href, function(err,stdout,stderr) {
+            if (err) throw err;
+
+            savePact(stdout, consumer);
+        });
+    })
+}
+
+//get pacts for this provider
+if (process.env.TAG) pactProviderUrl += ('/' + process.env.TAG);
+
+console.log('retrieving pacts from ' + pactProviderUrl);
+exec('curl '+pactProviderUrl, checkPacts);

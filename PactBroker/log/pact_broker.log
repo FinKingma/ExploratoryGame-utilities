@@ -5443,3 +5443,221 @@ I, [2016-06-02T17:21:04.209870 #3510]  INFO -- : (0.000210s) PRAGMA table_info('
 I, [2016-06-02T17:21:04.211310 #3510]  INFO -- : (0.000081s) PRAGMA table_info('webhook_headers')
 I, [2016-06-02T17:21:04.226852 #3510]  INFO -- : Mounting PactBroker::API
 I, [2016-06-02T21:11:15.237174 #3510]  INFO -- : (0.006737s) SELECT * FROM `latest_pacts`
+I, [2017-02-17T11:23:57.147015 #31525]  INFO -- : Migrating database
+I, [2017-02-17T11:23:57.153790 #31525]  INFO -- : (0.000663s) PRAGMA foreign_keys = 1
+I, [2017-02-17T11:23:57.153869 #31525]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2017-02-17T11:23:57.154142 #31525]  INFO -- : (0.000227s) SELECT sqlite_version()
+I, [2017-02-17T11:23:57.154376 #31525]  INFO -- : (0.000043s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2017-02-17T11:23:57.154702 #31525]  INFO -- : (0.000224s) SELECT * FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:23:57.154894 #31525]  INFO -- : (0.000060s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:23:57.155096 #31525]  INFO -- : (0.000071s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:23:57.155275 #31525]  INFO -- : (0.000061s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:23:57.155442 #31525]  INFO -- : Mounting HAL browser
+I, [2017-02-17T11:23:57.155474 #31525]  INFO -- : Mounting UI
+I, [2017-02-17T11:23:57.376545 #31525]  INFO -- : (0.000337s) PRAGMA table_info('pacticipants')
+I, [2017-02-17T11:23:57.379636 #31525]  INFO -- : (0.000135s) PRAGMA table_info('tags')
+I, [2017-02-17T11:23:57.381542 #31525]  INFO -- : (0.000141s) PRAGMA table_info('versions')
+I, [2017-02-17T11:23:57.389722 #31525]  INFO -- : (0.000224s) PRAGMA table_info('pact_version_contents')
+I, [2017-02-17T11:23:57.390835 #31525]  INFO -- : (0.000132s) PRAGMA table_info('pacts')
+I, [2017-02-17T11:23:57.392871 #31525]  INFO -- : (0.000192s) PRAGMA table_info('all_pacts')
+I, [2017-02-17T11:23:57.395257 #31525]  INFO -- : (0.000290s) PRAGMA table_info('latest_pacts')
+I, [2017-02-17T11:23:57.396671 #31525]  INFO -- : (0.000301s) PRAGMA table_info('latest_tagged_pacts')
+I, [2017-02-17T11:23:57.529179 #31525]  INFO -- : (0.000211s) PRAGMA table_info('webhooks')
+I, [2017-02-17T11:23:57.531026 #31525]  INFO -- : (0.000108s) PRAGMA table_info('webhook_headers')
+I, [2017-02-17T11:23:57.555310 #31525]  INFO -- : Mounting PactBroker::API
+I, [2017-02-17T11:24:04.052756 #31525]  INFO -- : (0.004343s) SELECT * FROM `latest_pacts`
+I, [2017-02-17T11:26:35.837396 #31567]  INFO -- : Migrating database
+I, [2017-02-17T11:26:35.841781 #31567]  INFO -- : (0.000464s) PRAGMA foreign_keys = 1
+I, [2017-02-17T11:26:35.841865 #31567]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
+I, [2017-02-17T11:26:35.842045 #31567]  INFO -- : (0.000121s) SELECT sqlite_version()
+I, [2017-02-17T11:26:35.842240 #31567]  INFO -- : (0.000041s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2017-02-17T11:26:35.842501 #31567]  INFO -- : (0.000140s) SELECT * FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:26:35.842788 #31567]  INFO -- : (0.000103s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:26:35.843033 #31567]  INFO -- : (0.000077s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:26:35.843246 #31567]  INFO -- : (0.000076s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2017-02-17T11:26:35.843412 #31567]  INFO -- : Mounting HAL browser
+I, [2017-02-17T11:26:35.843443 #31567]  INFO -- : Mounting UI
+I, [2017-02-17T11:26:36.021317 #31567]  INFO -- : (0.000256s) PRAGMA table_info('pacticipants')
+I, [2017-02-17T11:26:36.023756 #31567]  INFO -- : (0.000124s) PRAGMA table_info('tags')
+I, [2017-02-17T11:26:36.025243 #31567]  INFO -- : (0.000140s) PRAGMA table_info('versions')
+I, [2017-02-17T11:26:36.029975 #31567]  INFO -- : (0.000212s) PRAGMA table_info('pact_version_contents')
+I, [2017-02-17T11:26:36.030932 #31567]  INFO -- : (0.000119s) PRAGMA table_info('pacts')
+I, [2017-02-17T11:26:36.032584 #31567]  INFO -- : (0.000216s) PRAGMA table_info('all_pacts')
+I, [2017-02-17T11:26:36.034901 #31567]  INFO -- : (0.000286s) PRAGMA table_info('latest_pacts')
+I, [2017-02-17T11:26:36.036248 #31567]  INFO -- : (0.000368s) PRAGMA table_info('latest_tagged_pacts')
+I, [2017-02-17T11:26:36.129918 #31567]  INFO -- : (0.000231s) PRAGMA table_info('webhooks')
+I, [2017-02-17T11:26:36.131891 #31567]  INFO -- : (0.000136s) PRAGMA table_info('webhook_headers')
+I, [2017-02-17T11:26:36.152376 #31567]  INFO -- : Mounting PactBroker::API
+I, [2017-02-17T11:33:55.764601 #31567]  INFO -- : (0.001865s) SELECT * FROM `latest_pacts`
+I, [2017-02-17T11:34:49.903377 #31567]  INFO -- : (0.000292s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'MapMakerApi' ESCAPE '\') LIMIT 1
+I, [2017-02-17T11:34:49.908506 #31567]  INFO -- : (0.000222s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-17T11:34:49.908621 #31567]  INFO -- : (0.001244s) SELECT * FROM `latest_pacts` WHERE (`provider_name` LIKE 'MapMakerApi' ESCAPE '\')
+I, [2017-02-17T11:34:49.931193 #31567]  INFO -- : (0.000062s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-17T11:34:49.931656 #31567]  INFO -- : (0.000299s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2017-02-17T11:34:49.931734 #31567]  INFO -- : (0.001066s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '6.0.0' ESCAPE '\')) LIMIT 1
+I, [2017-02-17T11:34:51.122661 #31567]  INFO -- : (0.000388s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'ExploratoryTestingGame' ESCAPE '\') LIMIT 1
+I, [2017-02-17T11:34:51.123202 #31567]  INFO -- : (0.000322s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'MapMakerApi' ESCAPE '\') LIMIT 1
+I, [2017-02-17T11:34:51.124412 #31567]  INFO -- : (0.000094s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-17T11:34:51.124724 #31567]  INFO -- : (0.000189s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2017-02-17T11:34:51.124782 #31567]  INFO -- : (0.001080s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '6.0.0' ESCAPE '\')) LIMIT 1
+I, [2017-02-17T11:34:51.126211 #31567]  INFO -- : (0.000075s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 8)
+I, [2017-02-17T11:34:51.127332 #31567]  INFO -- : (0.001009s) SELECT * FROM `pact_version_contents` WHERE `sha` = '4253d7916e629114f23f467a6fa8d90c0b328fc5'
+I, [2017-02-17T11:34:51.127425 #31567]  INFO -- : (0.002005s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order < 7) AND (pact_version_content_sha != (SELECT `pact_version_content_sha` FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '6.0.0' ESCAPE '\')) LIMIT 1))) ORDER BY `consumer_version_order` DESC LIMIT 1
+I, [2017-02-17T11:34:51.128981 #31567]  INFO -- : (0.000074s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 9)
+I, [2017-02-17T11:34:51.129383 #31567]  INFO -- : (0.000296s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2017-02-17T11:34:51.129471 #31567]  INFO -- : (0.001020s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order > 5)) ORDER BY `consumer_version_order` LIMIT 1
+I, [2017-02-17T12:05:49.199264 #31567]  INFO -- : (0.000731s) SELECT * FROM `latest_pacts`
+I, [2017-02-17T12:05:54.947439 #31567]  INFO -- : (0.000517s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\')) ORDER BY `consumer_version_order` DESC LIMIT 1
+I, [2017-02-17T12:05:54.947797 #31567]  INFO -- : (0.000075s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-17T12:05:54.948094 #31567]  INFO -- : (0.000199s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+W, [2017-02-17T12:05:54.996619 #31567]  WARN -- : NoMethodError undefined method `[]' for nil:NilClass /usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/service_consumer.rb:9:in `initialize'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/service_consumer.rb:25:in `new'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/service_consumer.rb:25:in `from_hash'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/consumer_contract.rb:35:in `from_hash'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/consumer_contract.rb:43:in `from_json'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:89:in `consumer_contract'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:76:in `markdown'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:85:in `html'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:30:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:18:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/configuration.rb:35:in `block in default_html_pact_render'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/resources/latest_pact.rb:29:in `to_html'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/flow.rb:475:in `o18'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:30:in `block (2 levels) in run'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:50:in `handle_exceptions'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:30:in `block in run'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:28:in `loop'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:28:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/dispatcher.rb:46:in `block in dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/as-notifications-1.0.1/lib/as/notifications.rb:161:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/events.rb:75:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/dispatcher.rb:45:in `dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/adapters/rack.rb:68:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/cascade.rb:33:in `block in call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/cascade.rb:24:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/cascade.rb:24:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:66:in `block in call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:50:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:50:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/static.rb:124:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/rack/hal_browser/redirect.rb:19:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/rack/pact_broker/convert_file_extension_to_accept_header.rb:22:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/static.rb:124:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/builder.rb:153:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/app.rb:21:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:219:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:86:in `block in pre_process'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:84:in `catch'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:84:in `pre_process'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:53:in `process'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:39:in `receive_data'
+/usr/local/lib/ruby/gems/2.3.0/gems/eventmachine-1.2.0.1/lib/eventmachine.rb:194:in `run_machine'
+/usr/local/lib/ruby/gems/2.3.0/gems/eventmachine-1.2.0.1/lib/eventmachine.rb:194:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/backends/base.rb:73:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/server.rb:162:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/handler/thin.rb:19:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/bin/rackup:4:in `<top (required)>'
+/usr/local/bin/rackup:22:in `load'
+/usr/local/bin/rackup:22:in `<top (required)>'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/usr/local/bin/bundle:22:in `load'
+/usr/local/bin/bundle:22:in `<main>'
+W, [2017-02-17T12:05:54.996689 #31567]  WARN -- : Could not parse the following content to a Pact, showing raw content instead: {"interactions":[{"description":"request for an awesome map","provider_state":"casual","request":{"method":"get","path":"/api/mapmaker","headers":{"features":"30","bugs":"4"}},"response":{"status":200,"body":{"posY0":{"posX0":{"pathRight":{"json_class":"Pact::Term","data":{"generate":"Working","matcher":{"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}}},"pathDown":{"json_class":"Pact::Term","data":{"generate":"Working","matcher":{"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}}}}}}}}]}
+I, [2017-02-17T12:06:37.091435 #31567]  INFO -- : (0.000318s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'MapMakerApi' ESCAPE '\') LIMIT 1
+I, [2017-02-17T12:06:37.092803 #31567]  INFO -- : (0.001101s) SELECT * FROM `latest_pacts`
+I, [2017-02-17T12:07:11.147495 #31567]  INFO -- : (0.000599s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\')) ORDER BY `consumer_version_order` DESC LIMIT 1
+I, [2017-02-17T12:07:11.148037 #31567]  INFO -- : (0.000161s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-17T12:07:11.148709 #31567]  INFO -- : (0.000406s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+W, [2017-02-17T12:07:11.150638 #31567]  WARN -- : NoMethodError undefined method `[]' for nil:NilClass /usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/service_consumer.rb:9:in `initialize'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/service_consumer.rb:25:in `new'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/service_consumer.rb:25:in `from_hash'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/consumer_contract.rb:35:in `from_hash'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact-support-0.5.8/lib/pact/consumer_contract/consumer_contract.rb:43:in `from_json'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:89:in `consumer_contract'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:76:in `markdown'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:85:in `html'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:30:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/renderers/html_pact_renderer.rb:18:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/configuration.rb:35:in `block in default_html_pact_render'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/api/resources/latest_pact.rb:29:in `to_html'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/flow.rb:475:in `o18'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:30:in `block (2 levels) in run'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:50:in `handle_exceptions'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:30:in `block in run'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:28:in `loop'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/decision/fsm.rb:28:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/dispatcher.rb:46:in `block in dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/as-notifications-1.0.1/lib/as/notifications.rb:161:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/events.rb:75:in `instrument'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/dispatcher.rb:45:in `dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/webmachine-1.4.0/lib/webmachine/adapters/rack.rb:68:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/cascade.rb:33:in `block in call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/cascade.rb:24:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/cascade.rb:24:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:66:in `block in call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:50:in `each'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/urlmap.rb:50:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/static.rb:124:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/rack/hal_browser/redirect.rb:19:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/rack/pact_broker/convert_file_extension_to_accept_header.rb:22:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/static.rb:124:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/builder.rb:153:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/pact_broker-1.9.2/lib/pact_broker/app.rb:21:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/sinatra-1.4.7/lib/sinatra/base.rb:219:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:86:in `block in pre_process'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:84:in `catch'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:84:in `pre_process'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:53:in `process'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/connection.rb:39:in `receive_data'
+/usr/local/lib/ruby/gems/2.3.0/gems/eventmachine-1.2.0.1/lib/eventmachine.rb:194:in `run_machine'
+/usr/local/lib/ruby/gems/2.3.0/gems/eventmachine-1.2.0.1/lib/eventmachine.rb:194:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/backends/base.rb:73:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/thin-1.7.0/lib/thin/server.rb:162:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/handler/thin.rb:19:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/lib/rack/server.rb:147:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/rack-1.6.4/bin/rackup:4:in `<top (required)>'
+/usr/local/bin/rackup:22:in `load'
+/usr/local/bin/rackup:22:in `<top (required)>'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/usr/local/bin/bundle:22:in `load'
+/usr/local/bin/bundle:22:in `<main>'
+W, [2017-02-17T12:07:11.150710 #31567]  WARN -- : Could not parse the following content to a Pact, showing raw content instead: {"interactions":[{"description":"request for an awesome map","provider_state":"casual","request":{"method":"get","path":"/api/mapmaker","headers":{"features":"30","bugs":"4"}},"response":{"status":200,"body":{"posY0":{"posX0":{"pathRight":{"json_class":"Pact::Term","data":{"generate":"Working","matcher":{"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}}},"pathDown":{"json_class":"Pact::Term","data":{"generate":"Working","matcher":{"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}}}}}}}}]}

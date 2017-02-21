@@ -1,0 +1,1 @@
+PROVIDER=MapMakerApi PROVIDERURL=localhost:3000 PACTBROKERURL=localhost:8080 node pacts.js

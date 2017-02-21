@@ -1,5 +1,5 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'start' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@3.8.9
 3 info using node@v4.4.2
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
@@ -7,8 +7,8 @@
 6 silly lifecycle MapMakerApi@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle MapMakerApi@0.0.0~start: MapMakerApi@0.0.0
 8 verbose lifecycle MapMakerApi@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle MapMakerApi@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/finkingma/ExploratoryGame/MapMakerApi/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/scripts:/usr/local/lib/node_modules/protractor:/usr/local/share/dotnet:/Users/finkingma/ZorgDomein/zd-b2d-scripts:/Users/finkingma/Library/Python/2.7/bin:/Users/finkingma/ZorgDomein/zd-transaction-application/viewtest/node_modules/protractor-flake/bin
-10 verbose lifecycle MapMakerApi@0.0.0~start: CWD: /Users/finkingma/ExploratoryGame/MapMakerApi
+9 verbose lifecycle MapMakerApi@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/finkingma/myProjects/ExploratoryGame/MapMakerApi/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/scripts:/usr/local/lib/node_modules/protractor:/usr/local/share/dotnet:/Users/finkingma/ZorgDomein/zd-b2d-scripts:/Users/finkingma/Library/Python/2.7/bin:/Users/finkingma/ZorgDomein/zd-transaction-application/viewtest/node_modules/protractor-flake/bin
+10 verbose lifecycle MapMakerApi@0.0.0~start: CWD: /Users/finkingma/myProjects/ExploratoryGame/MapMakerApi
 11 silly lifecycle MapMakerApi@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle MapMakerApi@0.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle MapMakerApi@0.0.0~start: Failed to exec start script
@@ -23,9 +23,9 @@
 14 verbose stack     at maybeClose (internal/child_process.js:827:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 15 verbose pkgid MapMakerApi@0.0.0
-16 verbose cwd /Users/finkingma/ExploratoryGame/MapMakerApi
+16 verbose cwd /Users/finkingma/myProjects/ExploratoryGame/MapMakerApi
 17 error Darwin 15.6.0
-18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "start"
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v4.4.2
 20 error npm  v3.8.9
 21 error code ELIFECYCLE

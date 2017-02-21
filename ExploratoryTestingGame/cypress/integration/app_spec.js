@@ -8,7 +8,7 @@ describe('ET game', function(){
         // https://on.cypress.io/api/visit
         cy.server();
         cy.route("GET","/api/mapmaker", "fixture:map.json");
-        cy.visit("http://localhost:2000/skipwait");
+        cy.visit("http://localhost:2000");
     })
 
     it('should have control options', function(){
@@ -20,19 +20,24 @@ describe('ET game', function(){
         cy.get('#controls').select('use mouse');
     });
 
-    it('can start playing', function(){
-        cy.get('#play').click();
-        cy.get('#getReady').should('exist');
-        cy.wait(1000);
-        cy.get('#title').should('contain','The Exploratory Testing Game')
+    it('contains a wait for it', function(){
+        cy
+            .clock()
+            .get('#play').click()
+            .get('#getReady').should('exist')
+            .tick(5000)
+            .get('#title').should('contain','The Exploratory Testing Game')
     });
 
     it('ends after the timebox has ended', function(){
-        cy.get('#play').click();
-        cy.get('#getReady').should('exist');
-        cy.wait(31000);
-        cy.get('#timebox').should('contain','Times up.');
-        cy.get('#header').should('contain','Completed');
+        cy
+            .clock()
+            .get('#play').click()
+            .get('#getReady').should('exist')
+            .tick(5000)
+            .get('#title').should('contain','The Exploratory Testing Game')
+            .tick(30000)
+            .get('#header').should('contain','Completed');
     });
 
     xit('Finishes when player reaches goal', function(){

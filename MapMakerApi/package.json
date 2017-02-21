@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "pact": "node ./bin/www & ./pact-test.sh",
+    "mocha": "mocha ./public/javascripts/*.spec.js "
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -15,10 +17,13 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
+    "pact-consumer-js-dsl": "^0.2.2",
+    "pact-js-provider": "^1.1.5",
     "request": "^2.72.0"
   }
 }

@@ -1,0 +1,768 @@
+# For assistance debugging failures
+
+* The pact files have been stored locally in the following temp directory:
+    /Users/finkingma/myProjects/ExploratoryGame/MapMakerApi/tmp/pacts
+
+* The requests and responses are logged in the following log file:
+    /Users/finkingma/myProjects/ExploratoryGame/MapMakerApi/log/pact.log
+
+* Add BACKTRACE=true to the `rake pact:verify` command to see the full backtrace
+
+* If the diff output is confusing, try using another diff formatter.
+  The options are :unix, :embedded and :list
+
+    Pact.configure do | config |
+      config.diff_formatter = :embedded
+    end
+
+  See https://github.com/realestate-com-au/pact/blob/master/documentation/configuration.md#diff_formatter for examples and more information.
+
+* Check out https://github.com/realestate-com-au/pact/wiki/Troubleshooting
+
+* Ask a question in the google users' group https://groups.google.com/forum/#!forum/pact-support
+
+
+The following changes have been made since the previous distinct version of this pact, and may be responsible for verification failure:
+
+# Diff between versions 4.5.0 and 6.0.0 of the pact between ExploratoryTestingGame and MapMakerApi
+
+The following changes were made 9 months ago (Sun 29 May 2016, 3:55pm +02:00)
+
+@@ -2,711 +2,23 @@
+   "interactions": [
+     {
+       "response": {
+-        "headers": {
+-          "Content-Type": "application/json"
+-        },
+         "body": {
+           "posY0": {
+             "posX0": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX2": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX3": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Broken",
+-              "pathDown": "Open"
+-            },
+-            "posX5": {
+-              "pathRight": "Broken",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Working",
+-              "pathDown": "Broken"
+-            },
+-            "posX7": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX9": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY1": {
+-            "posX0": {
+-              "pathRight": "Feature",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX5": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX9": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Feature",
+-              "pathDown": "Feature"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY2": {
+-            "posX0": {
+-              "pathRight": "Feature",
+-              "pathDown": "Broken"
+-            },
+-            "posX1": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX5": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX9": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY3": {
+-            "posX0": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX2": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX3": {
+-              "pathRight": "Broken",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX5": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX6": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Broken",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Broken",
+-              "pathDown": "Feature"
+-            },
+-            "posX9": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working",
+-              "Goal": true
+-            }
+-          },
+-          "posY4": {
+-            "posX0": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX5": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX9": {
+-              "pathRight": "Feature",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Broken"
+-            }
+-          },
+-          "posY5": {
+-            "posX0": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX2": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX5": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Broken"
+-            },
+-            "posX7": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX8": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX9": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Broken"
+-            }
+-          },
+-          "posY6": {
+-            "posX0": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX2": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX3": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX5": {
+-              "pathRight": "Broken",
+-              "pathDown": "Feature"
+-            },
+-            "posX6": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX8": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX9": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Broken",
+-              "pathDown": "Feature"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY7": {
+-            "posX0": {
+-              "pathRight": "Feature",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX5": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX9": {
+-              "pathRight": "Feature",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX11": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY8": {
+-            "posX0": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX5": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX9": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY9": {
+-            "posX0": {
+-              "pathRight": "Working",
+-              "pathDown": "Broken"
+-            },
+-            "posX1": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX3": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX5": {
+-              "pathRight": "Working",
+-              "pathDown": "Feature"
+-            },
+-            "posX6": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX9": {
+-              "pathRight": "Working",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Working",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Broken",
+-              "pathDown": "Feature"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Broken"
+-            }
+-          },
+-          "posY10": {
+-            "posX0": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Broken"
+-            },
+-            "posX4": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX5": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX9": {
+-              "pathRight": "Open",
+-              "pathDown": "Broken"
+-            },
+-            "posX10": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY11": {
+-            "posX0": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX1": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX2": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX3": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX4": {
+-              "pathRight": "Open",
+-              "pathDown": "Feature"
+-            },
+-            "posX5": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX6": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX7": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX8": {
+-              "pathRight": "Feature",
+-              "pathDown": "Feature"
+-            },
+-            "posX9": {
+-              "pathRight": "Open",
+-              "pathDown": "Working"
+-            },
+-            "posX10": {
+-              "pathRight": "Feature",
+-              "pathDown": "Open"
+-            },
+-            "posX11": {
+-              "pathRight": "Open",
+-              "pathDown": "Open"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Working"
+-            }
+-          },
+-          "posY12": {
+-            "posX0": {
+-              "pathRight": "Broken",
+-              "pathDown": "Disabled"
+-            },
+-            "posX1": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX2": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX3": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX4": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX5": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX6": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX7": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX8": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX9": {
+-              "pathRight": "Broken",
+-              "pathDown": "Disabled"
+-            },
+-            "posX10": {
+-              "pathRight": "Broken",
+-              "pathDown": "Disabled"
+-            },
+-            "posX11": {
+-              "pathRight": "Working",
+-              "pathDown": "Disabled"
+-            },
+-            "posX12": {
+-              "pathRight": "Disabled",
+-              "pathDown": "Disabled"
++              "pathRight": {
++                "json_class": "Pact::Term",
++                "data": {
++                  "generate": "Working",
++                  "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
++                }
++              },
++              "pathDown": {
++                "json_class": "Pact::Term",
++                "data": {
++                  "generate": "Working",
++                  "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
++                }
++              }
+             }
+           }
+         }
+
+
+## Links
+
+current-pact-version:
+  title: Pact
+  name: Pact between ExploratoryTestingGame (v6.0.0) and MapMakerApi
+  href: http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/6.0.0
+previous-distinct-pact-version:
+  title: Pact
+  name: Pact between ExploratoryTestingGame (v4.5.0) and MapMakerApi
+  href: http://localhost:8080/pacts/provider/MapMakerApi/consumer/ExploratoryTestingGame/version/4.5.0
