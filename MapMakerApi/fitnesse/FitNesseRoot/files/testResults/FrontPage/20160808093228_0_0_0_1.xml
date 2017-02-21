@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20151230</FitNesseVersion>
+  <rootPath>FrontPage</rootPath>
+    <result>
+    <counts>
+      <right></right>
+      <wrong></wrong>
+      <ignores></ignores>
+      <exceptions></exceptions>
+    </counts>
+    <date>2016-08-08T09:32:28+02:00</date>
+    <runTimeInMillis>$result.runTimeInMillis</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;slim-fit-test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="exception closed"&gt;
+		&lt;td class="error"&gt;map-test&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td colspan="1"&gt;&lt;pre&gt;__EXCEPTION__:Error: Error: Cannot find module 'map'
+    at loadFixture (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:36:16)
+    at TestCodeLoader.loadFile (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:15:24)
+    at ExecutionManager.loadFileIntoSandbox (/usr/local/lib/node_modules/slimjs/src/exec/ExecutionManager.js:50:24)
+    at StatementExecutor.ImportExecutor.import (/usr/local/lib/node_modules/slimjs/src/exec/ImportExecutor.js:13:15)
+    at executeInstruction (/usr/local/lib/node_modules/slimjs/src/SlimJS.js:54:35)
+    at onInstructionExecutionResult (/usr/local/lib/node_modules/slimjs/src/SlimJS.js:43:17)
+    at /usr/local/lib/node_modules/slimjs/src/exec/ImportExecutor.js:17:13
+    at loadFixture (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:33:13)
+    at TestCodeLoader.loadFile (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:15:24)
+    at ExecutionManager.loadFileIntoSandbox (/usr/local/lib/node_modules/slimjs/src/exec/ExecutionManager.js:50:24)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;child_process&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="exception closed"&gt;
+		&lt;td class="error"&gt;check&lt;/td&gt;
+		&lt;td class="error"&gt;exec&lt;/td&gt;
+		&lt;td class="error"&gt;v5.4.0&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td colspan="3"&gt;&lt;pre&gt;__EXCEPTION__:Error: ENOENT: no such file or directory, open '/data/basicMap.json'
+    at Error (native)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;</content>
+    <relativePageName>FrontPage</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='slim-fit-test'}</instruction>
+        <slimResult>pass(slim-fit-test)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>slim-fit-test</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='map-test'}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>import_0_1</instructionId>
+                              <type>ImportExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='script'}</instruction>
+        <slimResult>pass(script)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_2</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>script</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_1_0', instruction='make', instanceName='scriptTableActor', className='child_process', args=[]}</instruction>
+        <slimResult>pass(child_process)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_1_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>child_process</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_1_1', instruction='call', instanceName='scriptTableActor', methodName='exec', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_1_1</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                      </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>slimjs ../public/javascripts/fixtures 8086</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr>/usr/local/lib/node_modules/slimjs/src/SlimJS.js:52
+        var command = instructionArguments[1];
+                                          ^
+
+TypeError: Cannot read property '1' of undefined
+    at executeInstruction (/usr/local/lib/node_modules/slimjs/src/SlimJS.js:52:43)
+    at onInstructionExecutionResult (/usr/local/lib/node_modules/slimjs/src/SlimJS.js:43:17)
+    at /usr/local/lib/node_modules/slimjs/src/exec/CallExecutor.js:58:17
+    at ReadFileContext.callback (/Users/finkingma/ExploratoryGame/MapMakerApi/public/javascripts/fixtures/script.js:14:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:303:13)
+</stdErr>
+    <exception>Stream Read Failure. Can't read length of message, EOF reached.  Possibly test aborted.  Last things read: </exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>237</totalRunTimeInMillis>
+</testResults>
+

@@ -1,0 +1,3 @@
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {slimjs %p}
+!path ../public/javascripts/fixtures

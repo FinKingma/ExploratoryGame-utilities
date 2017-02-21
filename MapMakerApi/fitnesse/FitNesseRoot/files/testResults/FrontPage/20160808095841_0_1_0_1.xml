@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20151230</FitNesseVersion>
+  <rootPath>FrontPage</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>3</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2016-08-08T09:58:41+02:00</date>
+    <runTimeInMillis>114</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;slim-fit-test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;eg.Division&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;generate&lt;/td&gt;
+		&lt;td&gt;bugs&lt;/td&gt;
+		&lt;td&gt;quotient?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;$result&amp;lt;-[NaN]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$result&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;NaN&lt;/span&gt;] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;0.5&lt;/span&gt;&lt;span class="fail"&gt;]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;12.6&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;NaN&lt;/span&gt;] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;4.2&lt;/span&gt;&lt;span class="fail"&gt;]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;100&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;NaN&lt;/span&gt;] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;25&lt;/span&gt;&lt;span class="fail"&gt;]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>FrontPage</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='slim-fit-test'}</instruction>
+        <slimResult>pass(slim-fit-test)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>slim-fit-test</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='script'}</instruction>
+        <slimResult>pass(script)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_1</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>script</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='eg.Division', args=[]}</instruction>
+        <slimResult>pass(eg.Division)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_0</instructionId>
+                    <col>0</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>eg.Division</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_7', instruction='callAndAssign', symbolName='result', instanceName='decisionTable_1', methodName='quotient', args=[]}</instruction>
+        <slimResult>$result&lt;-[NaN]</slimResult>
+                <expectation>
+                    <instructionId>decisionTable_1_7</instructionId>
+                    <col>2</col>
+                              <row>2</row>
+                    <type>SymbolAssignmentExpectation</type>
+                                        <evaluationMessage>$result&lt;-[NaN]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_12', instruction='call', instanceName='decisionTable_1', methodName='quotient', args=[]}</instruction>
+        <slimResult>fail(a=NaN;e=0.5)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>decisionTable_1_12</instructionId>
+                    <col>2</col>
+                              <row>3</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>NaN</actual>
+                              <expected>0.5</expected>
+                            </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_17', instruction='call', instanceName='decisionTable_1', methodName='quotient', args=[]}</instruction>
+        <slimResult>fail(a=NaN;e=4.2)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>decisionTable_1_17</instructionId>
+                    <col>2</col>
+                              <row>4</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>NaN</actual>
+                              <expected>4.2</expected>
+                            </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_22', instruction='call', instanceName='decisionTable_1', methodName='quotient', args=[]}</instruction>
+        <slimResult>fail(a=NaN;e=25)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>decisionTable_1_22</instructionId>
+                    <col>2</col>
+                              <row>5</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>NaN</actual>
+                              <expected>25</expected>
+                            </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>slimjs ../public/javascripts/fixtures 8086</command>
+    <exitCode>143</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+    <exception>2</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>232</totalRunTimeInMillis>
+</testResults>
+

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20151230</FitNesseVersion>
+  <rootPath>FrontPage</rootPath>
+    <result>
+    <counts>
+      <right></right>
+      <wrong></wrong>
+      <ignores></ignores>
+      <exceptions></exceptions>
+    </counts>
+    <date>2016-08-08T09:55:48+02:00</date>
+    <runTimeInMillis>$result.runTimeInMillis</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;slim-fit-test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="exception closed"&gt;
+		&lt;td class="error"&gt;map-test&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td colspan="1"&gt;&lt;pre&gt;__EXCEPTION__:Error: Error: Cannot find module 'map'
+    at loadFixture (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:36:16)
+    at TestCodeLoader.loadFile (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:15:24)
+    at ExecutionManager.loadFileIntoSandbox (/usr/local/lib/node_modules/slimjs/src/exec/ExecutionManager.js:50:24)
+    at StatementExecutor.ImportExecutor.import (/usr/local/lib/node_modules/slimjs/src/exec/ImportExecutor.js:13:15)
+    at executeInstruction (/usr/local/lib/node_modules/slimjs/src/SlimJS.js:54:35)
+    at onInstructionExecutionResult (/usr/local/lib/node_modules/slimjs/src/SlimJS.js:43:17)
+    at /usr/local/lib/node_modules/slimjs/src/exec/ImportExecutor.js:17:13
+    at loadFixture (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:33:13)
+    at TestCodeLoader.loadFile (/usr/local/lib/node_modules/slimjs/src/TestCodeLoader.js:15:24)
+    at ExecutionManager.loadFileIntoSandbox (/usr/local/lib/node_modules/slimjs/src/exec/ExecutionManager.js:50:24)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4"&gt;&lt;span class="pass"&gt;eg2.Division&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;generate&lt;/td&gt;
+		&lt;td&gt;features&lt;/td&gt;
+		&lt;td&gt;bugs&lt;/td&gt;
+		&lt;td&gt;paths?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;192&lt;/td&gt;
+		&lt;td&gt;10&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;192&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;</content>
+    <relativePageName>FrontPage</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='slim-fit-test'}</instruction>
+        <slimResult>pass(slim-fit-test)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>slim-fit-test</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='map-test'}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>import_0_1</instructionId>
+                              <type>ImportExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='script'}</instruction>
+        <slimResult>pass(script)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_2</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>script</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='eg2.Division', args=[]}</instruction>
+        <slimResult>pass(eg2.Division)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_0</instructionId>
+                    <col>0</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>eg2.Division</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_1_8', instruction='call', instanceName='decisionTable_1', methodName='paths', args=[]}</instruction>
+        <slimResult>pass(192)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_1_8</instructionId>
+                    <col>3</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>192</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>slimjs ../public/javascripts/fixtures 8094</command>
+    <exitCode>143</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+    <exception>2</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>334</totalRunTimeInMillis>
+</testResults>
+

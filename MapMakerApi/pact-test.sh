@@ -1,1 +1,1 @@
-PROVIDER=MapMakerApi PROVIDERURL=localhost:3000 PACTBROKERURL=localhost:8080 node pacts.js
+PROVIDER=MapMakerApi PROVIDERURL=localhost:3000 PACTBROKERURL=rails-beanstalk-env.xqwqpz45cy.eu-central-1.elasticbeanstalk.com node pacts.js
