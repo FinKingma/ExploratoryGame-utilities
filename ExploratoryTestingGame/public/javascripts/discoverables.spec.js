@@ -18,7 +18,7 @@ describe("discoverables", function() {
             Discoverables.discoverBug(Scorecard);
         }
         expect(Discoverables.BugsFound.length).toEqual(listLength+1);
-        expect(Discoverables.BugsFound[listLength]).toEqual("Undefined bug")
+        expect(Discoverables.BugsFound[listLength]).toEqual({name: "Undefined bug.", points: 120 })
     });
 
     it("a new feature should be added when discovered", function() {
@@ -39,6 +39,6 @@ describe("discoverables", function() {
             Discoverables.discoverFeature(Scorecard);
         }
         expect(Discoverables.FeaturesFound.length).toEqual(listLength+1);
-        expect(Discoverables.FeaturesFound[listLength]).toEqual("Undefined feature")
+        expect(Discoverables.FeaturesFound[listLength]).toEqual({name: "Undefined feature.", points: 70 })
     });
 });

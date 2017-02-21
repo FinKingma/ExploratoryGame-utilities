@@ -1,7 +1,6 @@
 function GetReadyStage(stage, callback) {
     var seconds = 5;
     var skipWait = $("#skipWait").val();
-    console.log('skip: ' + skipWait);
     if (skipWait == 'true') {
         seconds = 1;
     }

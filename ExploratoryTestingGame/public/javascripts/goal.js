@@ -28,13 +28,10 @@ Goal.draw = function(context,width,height,margin) {
         70);
     grd.addColorStop(0,"yellow");
     grd.addColorStop(1,"green");
-
     context.arc(
         (Goal.sw/12)*Goal.x + Goal.margin,
         (Goal.sh/12)*Goal.y + Goal.margin,
         Goal.size, 0, 2 * Math.PI, false);
-
-
     context.fillStyle = grd;
     context.fill();*/
 };

@@ -2,6 +2,10 @@ var margin = window.innerWidth/15;
 var scorecardWidth = .3;
 var gameWidth = .7;
 var timebox = 30;
+var skipWait = $("#skipWait").val();
+if (skipWait == 'true') {
+    timebox = 1;
+}
 
 var play;
 var totalDiscoverables;

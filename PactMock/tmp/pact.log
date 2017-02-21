@@ -1,0 +1,467 @@
+I, [2017-02-21T14:19:01.191328 #31544]  INFO -- : Received request DELETE /session
+D, [2017-02-21T14:19:01.192929 #31544] DEBUG -- : {
+  "path": "/session",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Origin": "http://localhost:9876",
+    "X-Pact-Mock-Service": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "Accept": "*/*",
+    "Referer": "http://localhost:9876/context.html",
+    "Accept-Encoding": "gzip, deflate, sdch, br",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cookie": "io=ZOfCRntJursxL2q5AAAA",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2017-02-21T14:19:01.193365 #31544] ERROR -- : No matching interaction found for DELETE /session
+E, [2017-02-21T14:19:01.193421 #31544] ERROR -- : Interaction diffs for that route:
+E, [2017-02-21T14:19:01.193482 #31544] ERROR -- : 
+I, [2017-02-21T14:19:01.200456 #31544]  INFO -- : Registered expected interaction GET /api/mapmaker
+D, [2017-02-21T14:19:01.202065 #31544] DEBUG -- : {
+  "description": "request for an awesome map",
+  "provider_state": "casual",
+  "request": {
+    "method": "get",
+    "path": "/api/mapmaker",
+    "headers": {
+      "features": "30",
+      "bugs": "4"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "posY0": {
+        "posX0": {
+          "pathRight": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          },
+          "pathDown": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+W, [2017-02-21T14:19:01.219416 #31544]  WARN -- : Verifying - actual interactions do not match expected interactions for example "". 
+Missing requests:
+	GET /api/mapmaker
+
+
+W, [2017-02-21T14:19:01.219502 #31544]  WARN -- : Missing requests:
+	GET /api/mapmaker
+
+
+I, [2017-02-21T14:21:27.700513 #31544]  INFO -- : Received request DELETE /session
+D, [2017-02-21T14:21:27.700809 #31544] DEBUG -- : {
+  "path": "/session",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Origin": "http://localhost:9876",
+    "X-Pact-Mock-Service": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "Accept": "*/*",
+    "Referer": "http://localhost:9876/context.html",
+    "Accept-Encoding": "gzip, deflate, sdch, br",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cookie": "io=SAZo_Iggu74jZeQMAAAA",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2017-02-21T14:21:27.701319 #31544] ERROR -- : No matching interaction found for DELETE /session
+E, [2017-02-21T14:21:27.701385 #31544] ERROR -- : Interaction diffs for that route:
+E, [2017-02-21T14:21:27.701508 #31544] ERROR -- : 
+I, [2017-02-21T14:21:27.707314 #31544]  INFO -- : Registered expected interaction GET /api/mapmaker
+D, [2017-02-21T14:21:27.707801 #31544] DEBUG -- : {
+  "description": "request for an awesome map",
+  "provider_state": "casual",
+  "request": {
+    "method": "get",
+    "path": "/api/mapmaker",
+    "headers": {
+      "features": "30",
+      "bugs": "4"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "posY0": {
+        "posX0": {
+          "pathRight": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          },
+          "pathDown": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+W, [2017-02-21T14:21:27.723314 #31544]  WARN -- : Verifying - actual interactions do not match expected interactions for example "". 
+Missing requests:
+	GET /api/mapmaker
+
+
+W, [2017-02-21T14:21:27.723383 #31544]  WARN -- : Missing requests:
+	GET /api/mapmaker
+
+
+I, [2017-02-21T14:23:15.435169 #31544]  INFO -- : Received request DELETE /session
+D, [2017-02-21T14:23:15.435539 #31544] DEBUG -- : {
+  "path": "/session",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Origin": "http://localhost:9876",
+    "X-Pact-Mock-Service": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "Accept": "*/*",
+    "Referer": "http://localhost:9876/context.html",
+    "Accept-Encoding": "gzip, deflate, sdch, br",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cookie": "io=DSdL9AivxJG__YH9AAAA",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2017-02-21T14:23:15.435789 #31544] ERROR -- : No matching interaction found for DELETE /session
+E, [2017-02-21T14:23:15.435879 #31544] ERROR -- : Interaction diffs for that route:
+E, [2017-02-21T14:23:15.435960 #31544] ERROR -- : 
+I, [2017-02-21T14:23:15.441240 #31544]  INFO -- : Registered expected interaction GET /api/mapmaker
+D, [2017-02-21T14:23:15.441543 #31544] DEBUG -- : {
+  "description": "request for an awesome map",
+  "provider_state": "casual",
+  "request": {
+    "method": "get",
+    "path": "/api/mapmaker",
+    "headers": {
+      "features": "30",
+      "bugs": "4"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "posY0": {
+        "posX0": {
+          "pathRight": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          },
+          "pathDown": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+W, [2017-02-21T14:23:15.467402 #31544]  WARN -- : Verifying - actual interactions do not match expected interactions for example "". 
+Missing requests:
+	GET /api/mapmaker
+
+
+W, [2017-02-21T14:23:15.467480 #31544]  WARN -- : Missing requests:
+	GET /api/mapmaker
+
+
+I, [2017-02-21T14:23:26.447903 #31544]  INFO -- : Received request DELETE /session
+D, [2017-02-21T14:23:26.448268 #31544] DEBUG -- : {
+  "path": "/session",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Origin": "http://localhost:9876",
+    "X-Pact-Mock-Service": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "Accept": "*/*",
+    "Referer": "http://localhost:9876/context.html",
+    "Accept-Encoding": "gzip, deflate, sdch, br",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cookie": "io=CeYPjR9Z-qKYiJ3pAAAA",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2017-02-21T14:23:26.448376 #31544] ERROR -- : No matching interaction found for DELETE /session
+E, [2017-02-21T14:23:26.448424 #31544] ERROR -- : Interaction diffs for that route:
+E, [2017-02-21T14:23:26.448466 #31544] ERROR -- : 
+I, [2017-02-21T14:23:26.453411 #31544]  INFO -- : Registered expected interaction GET /api/mapmaker
+D, [2017-02-21T14:23:26.453615 #31544] DEBUG -- : {
+  "description": "request for an awesome map",
+  "provider_state": "casual",
+  "request": {
+    "method": "get",
+    "path": "/api/mapmaker",
+    "headers": {
+      "features": "30",
+      "bugs": "4"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "posY0": {
+        "posX0": {
+          "pathRight": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          },
+          "pathDown": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+W, [2017-02-21T14:23:26.479180 #31544]  WARN -- : Verifying - actual interactions do not match expected interactions for example "". 
+Missing requests:
+	GET /api/mapmaker
+
+
+W, [2017-02-21T14:23:26.479245 #31544]  WARN -- : Missing requests:
+	GET /api/mapmaker
+
+
+I, [2017-02-21T14:23:54.878803 #31544]  INFO -- : Received request DELETE /session
+D, [2017-02-21T14:23:54.879030 #31544] DEBUG -- : {
+  "path": "/session",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Origin": "http://localhost:9876",
+    "X-Pact-Mock-Service": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "Accept": "*/*",
+    "Referer": "http://localhost:9876/context.html",
+    "Accept-Encoding": "gzip, deflate, sdch, br",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cookie": "io=bJo6I5kKDSXQ-YfdAAAA",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2017-02-21T14:23:54.879200 #31544] ERROR -- : No matching interaction found for DELETE /session
+E, [2017-02-21T14:23:54.879246 #31544] ERROR -- : Interaction diffs for that route:
+E, [2017-02-21T14:23:54.879286 #31544] ERROR -- : 
+I, [2017-02-21T14:23:54.884140 #31544]  INFO -- : Registered expected interaction GET /api/mapmaker
+D, [2017-02-21T14:23:54.884464 #31544] DEBUG -- : {
+  "description": "request for an awesome map",
+  "provider_state": "casual",
+  "request": {
+    "method": "get",
+    "path": "/api/mapmaker",
+    "headers": {
+      "features": "30",
+      "bugs": "4"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "posY0": {
+        "posX0": {
+          "pathRight": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          },
+          "pathDown": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+W, [2017-02-21T14:23:54.905156 #31544]  WARN -- : Verifying - actual interactions do not match expected interactions for example "". 
+Missing requests:
+	GET /api/mapmaker
+
+
+W, [2017-02-21T14:23:54.905226 #31544]  WARN -- : Missing requests:
+	GET /api/mapmaker
+
+
+I, [2017-02-21T14:26:29.783782 #31544]  INFO -- : Received request DELETE /session
+D, [2017-02-21T14:26:29.784026 #31544] DEBUG -- : {
+  "path": "/session",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Origin": "http://localhost:9876",
+    "X-Pact-Mock-Service": "true",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "Accept": "*/*",
+    "Referer": "http://localhost:9876/context.html",
+    "Accept-Encoding": "gzip, deflate, sdch, br",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cookie": "io=kxqYQARZkxS8qc1ZAAAA",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2017-02-21T14:26:29.784120 #31544] ERROR -- : No matching interaction found for DELETE /session
+E, [2017-02-21T14:26:29.784169 #31544] ERROR -- : Interaction diffs for that route:
+E, [2017-02-21T14:26:29.784208 #31544] ERROR -- : 
+I, [2017-02-21T14:26:29.789666 #31544]  INFO -- : Registered expected interaction GET /api/mapmaker
+D, [2017-02-21T14:26:29.789895 #31544] DEBUG -- : {
+  "description": "request for an awesome map",
+  "provider_state": "casual",
+  "request": {
+    "method": "get",
+    "path": "/api/mapmaker",
+    "headers": {
+      "features": "30",
+      "bugs": "4"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "posY0": {
+        "posX0": {
+          "pathRight": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          },
+          "pathDown": {
+            "json_class": "Pact::Term",
+            "data": {
+              "generate": "Working",
+              "matcher": {"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+I, [2017-02-21T14:26:29.799853 #31544]  INFO -- : Received request GET /api/mapmaker
+D, [2017-02-21T14:26:29.799989 #31544] DEBUG -- : {
+  "path": "/api/mapmaker",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "Connection": "keep-alive",
+    "Bugs": "4",
+    "Features": "30",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+    "Accept": "*/*",
+    "Referer": "http://localhost:9876/context.html",
+    "Accept-Encoding": "gzip, deflate, sdch, br",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cookie": "io=kxqYQARZkxS8qc1ZAAAA",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2017-02-21T14:26:29.800226 #31544]  INFO -- : Found matching response for GET /api/mapmaker
+D, [2017-02-21T14:26:29.800497 #31544] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "posY0": {
+      "posX0": {
+        "pathRight": {
+          "json_class": "Pact::Term",
+          "data": {
+            "generate": "Working",
+            "matcher": {
+              "json_class": "Regexp",
+              "o": 0,
+              "s": "^(Working|Broken)$"
+            }
+          }
+        },
+        "pathDown": {
+          "json_class": "Pact::Term",
+          "data": {
+            "generate": "Working",
+            "matcher": {
+              "json_class": "Regexp",
+              "o": 0,
+              "s": "^(Working|Broken)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+I, [2017-02-21T14:26:29.807967 #31544]  INFO -- : Verifying - interactions matched for example ""
+I, [2017-02-21T14:26:29.811160 #31544]  INFO -- : Writing pact with details {:consumer=>{:name=>"ExploratoryTestingGame"}, :provider=>{:name=>"MapMakerApi"}}
+I, [2017-02-21T14:26:29.811324 #31544]  INFO -- : Writing pact for MapMakerApi to tmp/pacts/exploratorytestinggame-mapmakerapi.json

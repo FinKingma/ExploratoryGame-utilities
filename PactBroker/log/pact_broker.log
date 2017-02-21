@@ -5661,3 +5661,87 @@ W, [2017-02-17T12:07:11.150638 #31567]  WARN -- : NoMethodError undefined method
 /usr/local/bin/bundle:22:in `load'
 /usr/local/bin/bundle:22:in `<main>'
 W, [2017-02-17T12:07:11.150710 #31567]  WARN -- : Could not parse the following content to a Pact, showing raw content instead: {"interactions":[{"description":"request for an awesome map","provider_state":"casual","request":{"method":"get","path":"/api/mapmaker","headers":{"features":"30","bugs":"4"}},"response":{"status":200,"body":{"posY0":{"posX0":{"pathRight":{"json_class":"Pact::Term","data":{"generate":"Working","matcher":{"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}}},"pathDown":{"json_class":"Pact::Term","data":{"generate":"Working","matcher":{"json_class":"Regexp","o":0,"s":"^(Working|Broken)$"}}}}}}}}]}
+I, [2017-02-21T14:07:25.236967 #32263]  INFO -- : Migrating database
+I, [2017-02-21T14:07:25.245811 #32263]  INFO -- : (0.000886s) PRAGMA foreign_keys = 1
+I, [2017-02-21T14:07:25.245910 #32263]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
+I, [2017-02-21T14:07:25.246331 #32263]  INFO -- : (0.000333s) SELECT sqlite_version()
+I, [2017-02-21T14:07:25.246605 #32263]  INFO -- : (0.000057s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2017-02-21T14:07:25.247013 #32263]  INFO -- : (0.000267s) SELECT * FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:07:25.247240 #32263]  INFO -- : (0.000071s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:07:25.247449 #32263]  INFO -- : (0.000063s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:07:25.247637 #32263]  INFO -- : (0.000066s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:07:25.247857 #32263]  INFO -- : Mounting HAL browser
+I, [2017-02-21T14:07:25.247892 #32263]  INFO -- : Mounting UI
+I, [2017-02-21T14:07:25.460938 #32263]  INFO -- : (0.000286s) PRAGMA table_info('pacticipants')
+I, [2017-02-21T14:07:25.464063 #32263]  INFO -- : (0.000167s) PRAGMA table_info('tags')
+I, [2017-02-21T14:07:25.466056 #32263]  INFO -- : (0.000152s) PRAGMA table_info('versions')
+I, [2017-02-21T14:07:25.472669 #32263]  INFO -- : (0.000291s) PRAGMA table_info('pact_version_contents')
+I, [2017-02-21T14:07:25.473662 #32263]  INFO -- : (0.000144s) PRAGMA table_info('pacts')
+I, [2017-02-21T14:07:25.475614 #32263]  INFO -- : (0.000195s) PRAGMA table_info('all_pacts')
+I, [2017-02-21T14:07:25.478034 #32263]  INFO -- : (0.000295s) PRAGMA table_info('latest_pacts')
+I, [2017-02-21T14:07:25.479413 #32263]  INFO -- : (0.000338s) PRAGMA table_info('latest_tagged_pacts')
+I, [2017-02-21T14:07:25.617216 #32263]  INFO -- : (0.000217s) PRAGMA table_info('webhooks')
+I, [2017-02-21T14:07:25.618775 #32263]  INFO -- : (0.000112s) PRAGMA table_info('webhook_headers')
+I, [2017-02-21T14:07:25.643030 #32263]  INFO -- : Mounting PactBroker::API
+I, [2017-02-21T14:07:47.687360 #31567]  INFO -- : (0.006383s) SELECT * FROM `latest_pacts`
+I, [2017-02-21T14:12:54.402522 #32312]  INFO -- : Migrating database
+I, [2017-02-21T14:12:54.407645 #32312]  INFO -- : (0.000464s) PRAGMA foreign_keys = 1
+I, [2017-02-21T14:12:54.407726 #32312]  INFO -- : (0.000022s) PRAGMA case_sensitive_like = 1
+I, [2017-02-21T14:12:54.407888 #32312]  INFO -- : (0.000109s) SELECT sqlite_version()
+I, [2017-02-21T14:12:54.408136 #32312]  INFO -- : (0.000065s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2017-02-21T14:12:54.408355 #32312]  INFO -- : (0.000093s) SELECT * FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:12:54.408548 #32312]  INFO -- : (0.000082s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:12:54.408741 #32312]  INFO -- : (0.000070s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:12:54.408926 #32312]  INFO -- : (0.000066s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:12:54.409143 #32312]  INFO -- : Mounting HAL browser
+I, [2017-02-21T14:12:54.409168 #32312]  INFO -- : Mounting UI
+I, [2017-02-21T14:12:54.584668 #32312]  INFO -- : (0.000343s) PRAGMA table_info('pacticipants')
+I, [2017-02-21T14:12:54.587028 #32312]  INFO -- : (0.000142s) PRAGMA table_info('tags')
+I, [2017-02-21T14:12:54.588494 #32312]  INFO -- : (0.000131s) PRAGMA table_info('versions')
+I, [2017-02-21T14:12:54.593138 #32312]  INFO -- : (0.000246s) PRAGMA table_info('pact_version_contents')
+I, [2017-02-21T14:12:54.594251 #32312]  INFO -- : (0.000168s) PRAGMA table_info('pacts')
+I, [2017-02-21T14:12:54.595993 #32312]  INFO -- : (0.000185s) PRAGMA table_info('all_pacts')
+I, [2017-02-21T14:12:54.598242 #32312]  INFO -- : (0.000303s) PRAGMA table_info('latest_pacts')
+I, [2017-02-21T14:12:54.599210 #32312]  INFO -- : (0.000286s) PRAGMA table_info('latest_tagged_pacts')
+I, [2017-02-21T14:12:54.683974 #32312]  INFO -- : (0.000233s) PRAGMA table_info('webhooks')
+I, [2017-02-21T14:12:54.685793 #32312]  INFO -- : (0.000119s) PRAGMA table_info('webhook_headers')
+I, [2017-02-21T14:12:54.704118 #32312]  INFO -- : Mounting PactBroker::API
+I, [2017-02-21T14:17:02.486099 #32351]  INFO -- : Migrating database
+I, [2017-02-21T14:17:02.491620 #32351]  INFO -- : (0.000452s) PRAGMA foreign_keys = 1
+I, [2017-02-21T14:17:02.491695 #32351]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2017-02-21T14:17:02.491841 #32351]  INFO -- : (0.000082s) SELECT sqlite_version()
+I, [2017-02-21T14:17:02.492060 #32351]  INFO -- : (0.000039s) CREATE TABLE IF NOT EXISTS `schema_info` (`version` integer DEFAULT (0) NOT NULL)
+I, [2017-02-21T14:17:02.492293 #32351]  INFO -- : (0.000130s) SELECT * FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:17:02.492512 #32351]  INFO -- : (0.000075s) SELECT 1 AS 'one' FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:17:02.492841 #32351]  INFO -- : (0.000099s) SELECT count(*) AS 'count' FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:17:02.493110 #32351]  INFO -- : (0.000080s) SELECT `version` FROM `schema_info` LIMIT 1
+I, [2017-02-21T14:17:02.493443 #32351]  INFO -- : Mounting HAL browser
+I, [2017-02-21T14:17:02.493477 #32351]  INFO -- : Mounting UI
+I, [2017-02-21T14:17:02.682775 #32351]  INFO -- : (0.000339s) PRAGMA table_info('pacticipants')
+I, [2017-02-21T14:17:02.685322 #32351]  INFO -- : (0.000192s) PRAGMA table_info('tags')
+I, [2017-02-21T14:17:02.686772 #32351]  INFO -- : (0.000139s) PRAGMA table_info('versions')
+I, [2017-02-21T14:17:02.691869 #32351]  INFO -- : (0.000274s) PRAGMA table_info('pact_version_contents')
+I, [2017-02-21T14:17:02.692974 #32351]  INFO -- : (0.000151s) PRAGMA table_info('pacts')
+I, [2017-02-21T14:17:02.694707 #32351]  INFO -- : (0.000193s) PRAGMA table_info('all_pacts')
+I, [2017-02-21T14:17:02.696705 #32351]  INFO -- : (0.000330s) PRAGMA table_info('latest_pacts')
+I, [2017-02-21T14:17:02.697799 #32351]  INFO -- : (0.000357s) PRAGMA table_info('latest_tagged_pacts')
+I, [2017-02-21T14:17:02.786933 #32351]  INFO -- : (0.000262s) PRAGMA table_info('webhooks')
+I, [2017-02-21T14:17:02.788418 #32351]  INFO -- : (0.000104s) PRAGMA table_info('webhook_headers')
+I, [2017-02-21T14:17:02.806233 #32351]  INFO -- : Mounting PactBroker::API
+I, [2017-02-21T14:17:38.067085 #32351]  INFO -- : (0.001791s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'MapMakerApi' ESCAPE '\') LIMIT 1
+I, [2017-02-21T14:17:38.070766 #32351]  INFO -- : (0.000283s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-21T14:17:38.070882 #32351]  INFO -- : (0.002629s) SELECT * FROM `latest_pacts` WHERE (`provider_name` LIKE 'MapMakerApi' ESCAPE '\')
+I, [2017-02-21T14:17:38.095693 #32351]  INFO -- : (0.000072s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-21T14:17:38.096799 #32351]  INFO -- : (0.000928s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2017-02-21T14:17:38.096930 #32351]  INFO -- : (0.001965s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '6.0.0' ESCAPE '\')) LIMIT 1
+I, [2017-02-21T14:17:39.160168 #32351]  INFO -- : (0.000295s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'ExploratoryTestingGame' ESCAPE '\') LIMIT 1
+I, [2017-02-21T14:17:39.160464 #32351]  INFO -- : (0.000163s) SELECT * FROM `pacticipants` WHERE (`name` LIKE 'MapMakerApi' ESCAPE '\') LIMIT 1
+I, [2017-02-21T14:17:39.161262 #32351]  INFO -- : (0.000055s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 10)
+I, [2017-02-21T14:17:39.161513 #32351]  INFO -- : (0.000154s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2017-02-21T14:17:39.161563 #32351]  INFO -- : (0.000752s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '6.0.0' ESCAPE '\')) LIMIT 1
+I, [2017-02-21T14:17:39.162399 #32351]  INFO -- : (0.000050s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 8)
+I, [2017-02-21T14:17:39.162935 #32351]  INFO -- : (0.000456s) SELECT * FROM `pact_version_contents` WHERE `sha` = '4253d7916e629114f23f467a6fa8d90c0b328fc5'
+I, [2017-02-21T14:17:39.163041 #32351]  INFO -- : (0.001078s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order < 7) AND (pact_version_content_sha != (SELECT `pact_version_content_sha` FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (`consumer_version_number` LIKE '6.0.0' ESCAPE '\')) LIMIT 1))) ORDER BY `consumer_version_order` DESC LIMIT 1
+I, [2017-02-21T14:17:39.165266 #32351]  INFO -- : (0.000098s) SELECT * FROM `tags` WHERE (`tags`.`version_id` = 9)
+I, [2017-02-21T14:17:39.165663 #32351]  INFO -- : (0.000273s) SELECT * FROM `pact_version_contents` WHERE `sha` = 'c38042864b5e0425d3c65103fb9980d0a01d9cf5'
+I, [2017-02-21T14:17:39.165780 #32351]  INFO -- : (0.001256s) SELECT * FROM `all_pacts` WHERE ((`consumer_name` LIKE 'ExploratoryTestingGame' ESCAPE '\') AND (`provider_name` LIKE 'MapMakerApi' ESCAPE '\') AND (consumer_version_order > 5)) ORDER BY `consumer_version_order` LIMIT 1

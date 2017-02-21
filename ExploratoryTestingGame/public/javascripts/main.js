@@ -1,7 +1,3 @@
-
-
-
-
 var visitedPos = {
     x: [],
     y: []

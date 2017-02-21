@@ -1,11 +1,11 @@
-/*describe("map", function() {
+describe("map", function() {
     var helloProvider;
     beforeEach(function(done) {
 
         helloProvider = Pact.mockService({
             consumer: 'ExploratoryTestingGame',
             provider: 'MapMakerApi',
-            host: '192.168.99.100',
+            host: 'localhost',
             port: 1234,
             done: function (error) {
                 expect(error).toBe(null);
@@ -44,9 +44,8 @@
                 expect(data).toBeDefined();
                 expect(data["posY0"]["posX0"]["pathRight"]).toBe("Working");
 
-                
                 runComplete();
             });
         });
     });
-});*/
+});
