@@ -9,6 +9,7 @@ var exec = require('child_process').exec;
 
 var provider = process.env.PROVIDER;
 var pactUrl = 'http://' + process.env.PACTBROKERURL;
+
 var pactProviderUrl = pactUrl+'/pacts/provider/'+provider + '/latest';
 
 pactJs.timeout = 60000;

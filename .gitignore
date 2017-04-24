@@ -1,7 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
-MapMakerApi/node_modules
-ExploratoryTestingGame/node_modules
-ExploratoryTestingGame/cypress/videos
-PactBroker/log
-PactMock/tmp/pids
-PactMock/tmp
+MapMakerApi/node_modules/*
+MapMakerApi/log/*
+ExploratoryTestingGame/node_modules/*
+ExploratoryTestingGame/cypress/videos/*
+PactBroker/log/*
+PactMock/tmp/pids/*
+PactMock/tmp/*
