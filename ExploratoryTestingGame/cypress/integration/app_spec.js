@@ -36,7 +36,7 @@ describe('ET game', function(){
             .get('#getReady').should('exist')
             .tick(5000)
             .get('#title').should('contain','The Exploratory Testing Game')
-            .tick(30000)
+            .tick(31000)
             .get('#header').should('contain','Completed');
     });
 

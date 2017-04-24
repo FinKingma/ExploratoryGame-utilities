@@ -2,3 +2,6 @@
 MapMakerApi/node_modules
 ExploratoryTestingGame/node_modules
 ExploratoryTestingGame/cypress/videos
+PactBroker/log
+PactMock/tmp/pids
+PactMock/tmp

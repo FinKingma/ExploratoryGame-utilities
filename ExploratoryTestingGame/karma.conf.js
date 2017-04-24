@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'sinon'],
 
 
     // list of files / patterns to load in the browser
@@ -21,6 +21,10 @@ module.exports = function(config) {
         'public/javascripts/scorecard.js',
         'public/javascripts/map.js',
         'public/javascripts/map.spec.js',
+        'public/javascripts/hero.js',
+        'public/javascripts/hero.spec.js',
+        'public/javascripts/timebox.js',
+        'public/javascripts/timebox.spec.js',
         'public/javascripts/discoverables.js',
         'public/javascripts/discoverables.spec.js'
     ],

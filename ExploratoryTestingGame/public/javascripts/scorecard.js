@@ -1,4 +1,5 @@
 var scorecard;
+//100% dependant on HTML
 
 var Scorecard = function(widthPercentage,timebox) {
     scorecard = {
@@ -33,6 +34,8 @@ var Scorecard = function(widthPercentage,timebox) {
     scorecard.features.text('no features discovered.');
     scorecard.explored.text('nothing explored');
     scorecard.exploredArea.css('width','0%');
+
+    return scorecard;
 };
 
 Scorecard.draw = function(widthPercentage) {
@@ -69,16 +72,13 @@ Scorecard.explored = function(total,current) {
     scorecard.exploredArea.css('width',percentage+'%');
 };
 
-Scorecard.timeboxTick = function() {
-    scorecard.seconds--;
-    scorecard.timeboxText.text(scorecard.seconds + ' seconds');
-    var percentage = (scorecard.seconds / scorecard.timebox) * 100;
+Scorecard.tickHandler = function(secondsLeft, secondsTotal) {
+    scorecard.timeboxText.text(secondsLeft + ' seconds');
+    var percentage = (secondsLeft / secondsTotal) * 100;
     scorecard.timeboxArea.css('width',percentage + '%');
-
-    return scorecard.seconds === 0;
 };
 
-Scorecard.end = function(achieved, features, bugs, explored) {
+Scorecard.end = function(achieved, features, bugs, explored, seconds) {
     var points = 0;
     if (achieved) points += 1000;
     console.log('points 1: ' + points);
@@ -98,7 +98,7 @@ Scorecard.end = function(achieved, features, bugs, explored) {
     scorecard.scoreText.text('Final score: ' + points);
     if (achieved) {
         $('#achieved').text('Goal achieved');
-        scorecard.timeboxText.text('Time remaining: ' + scorecard.seconds + ' seconds');
+        scorecard.timeboxText.text('Time remaining: ' + seconds + ' seconds');
     } else {
         $('#achieved').text('Goal not achieved...');
         scorecard.timeboxText.text('Times up.');

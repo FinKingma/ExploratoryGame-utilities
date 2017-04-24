@@ -1,3 +1,5 @@
+//10% dependant on HTML
+
 var movLeft = 0;
 var movRight = 0;
 var movUp = 0;
@@ -11,18 +13,18 @@ var visitedPos = {
 };
 
 
-function Hero(controls, gameWidth) {
+function Hero(controls, gameWidth, screenWidth, screenHeight) {
     Hero.controls = controls;
     Hero.size = 30;
-    Hero.x = (window.innerWidth / 2) * gameWidth;
-    Hero.y = window.innerHeight / 2;
+    Hero.x = (screenWidth / 2) * gameWidth;
+    Hero.y = screenHeight / 2;
     Hero.speedX = 0;
     Hero.speedY = 0;
     Hero.friction = 1.10;
     Hero.percentageX = 1;
     Hero.percentageY = 1;
-    Hero.originalSWidth = window.innerWidth;
-    Hero.originalSHeight = window.innerHeight;
+    Hero.originalSWidth = screenWidth;
+    Hero.originalSHeight = screenHeight;
     visitedPos.x.push(Hero.x | 0);
     visitedPos.y.push(Hero.y | 0);
 
@@ -58,7 +60,7 @@ function Hero(controls, gameWidth) {
 }
 
 Hero.draw = function(context,width,height,margin) {
-    moveHero(context);
+    moveHero(context,window.innerWidth,window.innerHeight);
 
     var realX = Hero.x * Hero.percentageX;
     var realY = Hero.y * Hero.percentageY;
@@ -110,7 +112,7 @@ Hero.draw = function(context,width,height,margin) {
     context.fill();
 };
 
-function moveHero(context) {
+function moveHero(context, resizedWidth, resizedHeight) {
     if (Hero.controls === 'keyboard') {
         if (movLeft) Hero.speedX--;
         if (movRight) Hero.speedX++;
@@ -123,18 +125,19 @@ function moveHero(context) {
         }
     }
 
-    Hero.percentageX = window.innerWidth / Hero.originalSWidth;
-    Hero.percentageY = window.innerHeight / Hero.originalSHeight;
+    Hero.percentageX = resizedWidth / Hero.originalSWidth;
+    Hero.percentageY = resizedHeight / Hero.originalSHeight;
 
     Hero.speedX /= Hero.friction;
     Hero.speedY /= Hero.friction;
 
     var pixelX = context.getImageData(((Hero.x*Hero.percentageX) + Hero.speedX) | 0, (Hero.y*Hero.percentageY) | 0, 1, 1).data;
+    
     //if pixel is not background
     if (!(pixelX[0] > 80 && pixelX[0] < 155 &&
         pixelX[1] > 163 && pixelX[1] < 203 &&
         pixelX[2] > 163 && pixelX[2] < 203)) {
-        Hero.x += Hero.speedX;
+            Hero.x += Hero.speedX;
     }
 
     //check for movement Y
@@ -142,11 +145,10 @@ function moveHero(context) {
     if (!(pixelY[0] > 80 && pixelY[0] < 155 &&
         pixelY[1] > 163 && pixelY[1] < 203 &&
         pixelY[2] > 163 && pixelY[2] < 203)) {
-        Hero.y += Hero.speedY;
+            Hero.y += Hero.speedY;
     }
 
     bounceBack(context);
-    checkForPickups();
 
     Hero.x = Math.round(Hero.x);
     Hero.y = Math.round(Hero.y);

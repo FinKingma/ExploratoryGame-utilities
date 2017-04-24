@@ -1,7 +1,7 @@
 var margin = window.innerWidth/15;
 var scorecardWidth = .3;
 var gameWidth = .7;
-var timebox = 30;
+var secondsTillEnd = 30;
 
 var play;
 var totalDiscoverables;
@@ -22,21 +22,22 @@ function startGame() {
             new Goal(goalPos);
             var controls = $("#controls").val();
             console.log('playing with a ' + controls + '.');
-            new Hero(controls, gameWidth);
+            new Hero(controls, gameWidth, window.innerWidth, window.innerHeight);
             new Discoverables();
-            new Scorecard(scorecardWidth, timebox);
+            var scorecard = new Scorecard(scorecardWidth, secondsTillEnd);
             console.log('preparing the stage...');
             getInitialMapData(function() {
+                new timebox(secondsTillEnd, function(currentTimebox, totalTimebox) {
+                    console.log('tick');
+                    Scorecard.tickHandler(currentTimebox, totalTimebox);
+                }, function() {
+                    console.log('clearing');
+                    endSession(false, Discoverables.BugsFound, Discoverables.FeaturesFound, scorecard.exploredPercentage);
+                });
+
                 play = setInterval(function() {
                     renderStage();
                 },25);
-                timer = setInterval(function() {
-                    timebox--;
-                    if (Scorecard.timeboxTick()) {
-                        endSession(false, Discoverables.BugsFound, Discoverables.FeaturesFound, scorecard.exploredPercentage);
-                        clearInterval(timer);
-                    }
-                },1000);
             });
         });
     });
@@ -207,6 +208,6 @@ function drawBackground(stage) {
 
 function endSession(achieved, features, bugs, explored) {
     if (play) clearInterval(play);
-    if (timer) clearInterval(timer);
-    Scorecard.end(achieved, features, bugs, explored);
+    var seconds = timebox.finishHandler();
+    Scorecard.end(achieved, features, bugs, explored, seconds);
 }
