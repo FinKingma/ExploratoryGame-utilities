@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "karma": "cd ../PactBroker/ && ./start-broker.sh & cd ../PactMock/ && ./start-mock.sh && cd ../ExploratoryTestingGame/ && sleep 1s && karma start && cd ../PactBroker/ && ./stop-broker.sh && cd ../PactMock/ && ./stop-mock.sh",
+    "karma": "karma start",
+    "karma-local": "cd ../PactBroker/ && ./start-broker.sh & cd ../PactMock/ && ./start-mock.sh && cd ../ExploratoryTestingGame/ && sleep 1s && karma start && cd ../PactBroker/ && ./stop-broker.sh && cd ../PactMock/ && ./stop-mock.sh",
     "cypress": "node ./bin/www & cypress run"
   },
   "dependencies": {

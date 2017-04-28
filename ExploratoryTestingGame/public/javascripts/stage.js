@@ -83,8 +83,8 @@ function Stage() {
 
 function renderStage() {
     var stage = Stage();
-    checkForPickups();
     drawStage(stage);
+    checkForPickups();
 }
 
 function checkForPickups() {
@@ -210,4 +210,21 @@ function endSession(achieved, features, bugs, explored) {
     if (play) clearInterval(play);
     var seconds = timebox.finishHandler();
     Scorecard.end(achieved, features, bugs, explored, seconds);
+
+    //write end very big on stage
+    var context = document.getElementById("gamestage").getContext("2d");
+    var sw = window.innerWidth * gameWidth;
+    var sh = window.innerHeight;
+
+    context.fillStyle= 'rgba(255,255,255,0.7)';
+    context.fillRect(0,0,sw,sh);
+
+    context.fillStyle= 'black';
+    if (achieved) {
+        context.font=String(sw / 6) + "px Quattrocento";
+        context.fillText("DONE!",(sw / 4),sh / 2);
+    } else {
+        context.font=String(sw / 6) + "px Quattrocento";
+        context.fillText("TIME'S UP!",(sw / 15  ),sh / 2);
+    }
 }
