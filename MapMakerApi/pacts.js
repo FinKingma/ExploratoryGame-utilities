@@ -1,7 +1,6 @@
 
 if (!process.env.PROVIDER) throw new Error('use environment variable PROVIDER to specify a provider for this testrun!');
-if (!process.env.PROVIDERURL) throw new Error('use environment variable PROVIDERURL to specify the provider environment for this testrun!');
-if (!process.env.PACTBROKERURL) throw new Error('use environment variable PACTBROKERURL to specify the environment of pact broker!');
+if (!process.env.PACTBROKERURL) throw new Error('use environment variable pactbrokerurl to specify the environment of pact broker!');
 
 var pactJs = require('./utils/pact_overrider.js');
 var fs = require('fs');

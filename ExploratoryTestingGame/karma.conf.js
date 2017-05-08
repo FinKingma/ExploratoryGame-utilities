@@ -3,6 +3,9 @@
 
 module.exports = function(config) {
   config.set({
+    client: {
+      args: [process.env.pactbrokerurl, process.env.pactmockurl]
+    },
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',

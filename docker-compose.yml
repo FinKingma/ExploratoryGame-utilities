@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mm:
+    environment:
+     - pactbrokerurl="http://192.168.99.100:8080"
+    build: ./MapMakerApi
+    ports:
+     - "3000:3000"
+  # etg:
+  #   environment:
+  #   - pactmockurl="http://192.168.99.100:1234"
+  #   - pactbrokerurl="http://192.168.99.100:8080"
+  #   - mapmakerurl="http://192.168.99.100:3000"
+  #   build: ./ExploratoryTestingGame
+  #   ports:
+  #    - "2000:2000"

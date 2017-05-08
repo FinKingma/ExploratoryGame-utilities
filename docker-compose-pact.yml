@@ -1,0 +1,14 @@
+version: '3'
+services:
+  pb:
+    build: ./PactBroker
+    ports:
+    - "8080:8080"
+  pm:
+    build: ./PactMock
+    ports:
+    - "1234:1234"
+  jenkins:
+    build: jenkinsci/blueocean:latest
+    ports:
+    - "8888:8080"

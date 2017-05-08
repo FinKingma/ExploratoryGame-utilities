@@ -1,12 +1,15 @@
 describe("map", function() {
     var helloProvider;
-    beforeEach(function(done) {
+    var pmurl = window.__karma__.config.args[1];
 
+    console.log('hooi' + pmurl);
+
+    beforeEach(function(done) {
         helloProvider = Pact.mockService({
             consumer: 'ExploratoryTestingGame',
             provider: 'MapMakerApi',
-            host: 'localhost',
-            port: 1234,
+            host: pmurl.split(':')[1],
+            port: pmurl.split(':')[2],
             done: function (error) {
                 expect(error).toBe(null);
             }

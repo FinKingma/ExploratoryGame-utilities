@@ -10,5 +10,5 @@ RUN cd $APP_HOME
 WORKDIR $APP_HOME
 RUN bundle
 
-EXPOSE 3000
-CMD ["bundle", "exec", "rackup", "-o","0.0.0.0", "-p", "3000"]
+EXPOSE 8080
+CMD ["bundle", "exec", "rackup", "-o","0.0.0.0", "-p", "8080"]

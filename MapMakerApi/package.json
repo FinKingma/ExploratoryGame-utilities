@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "pact": "cd ../PactBroker/ & ./start-broker.sh && cd ../MapMakerApi/ && sleep 5s && node ./bin/www & ./pact-test.sh && cd ../PactBroker/ && ./stop-broker.sh",
+    "pact": "node ./bin/www & ./pact-test.sh",
     "mocha": "mocha ./public/javascripts/*.spec.js ",
     "fitnesse": "cd fitnesse && ./runtest.sh"
   },

@@ -5,9 +5,12 @@ var Map = function(callback) {
 
 
 function generateMap(callback) {
+    var mmaurl = $("#mmaurl").val();
+    console.log('env: ' + mmaurl);
+    
     $.ajax({
         type: "GET",
-        url: "http://localhost:3000/api/mapmaker",
+        url: mmaurl+"/api/mapmaker",
         dataType: "json",
         accepts: "application/json",
         headers: {

@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
   } else {
     controls = ['keyboard','mouse','touch'];
   }
-  res.render('index', { title: 'The Exploratory Testing Game', skipWait: false, controls: controls });
+  res.render('index', { title: 'The Exploratory Testing Game', skipWait: false, controls: controls});
 });
 
 function isCallerMobile(req) {

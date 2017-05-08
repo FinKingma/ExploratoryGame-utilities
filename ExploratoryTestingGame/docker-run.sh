@@ -1,1 +1,0 @@
-docker run -p 2000:2000 -d finkingma/exploratory-testing-game npm run start

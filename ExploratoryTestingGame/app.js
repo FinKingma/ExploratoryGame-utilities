@@ -48,6 +48,11 @@ if (app.get('env') === 'development') {
     });
   });
 }
+if (app.get('pactbrokerurl')) {
+  alert('hoooi');
+  alert('test: ' + app.get('pactbrokerurl'));
+}
+
 
 // production error handler
 // no stacktraces leaked to user

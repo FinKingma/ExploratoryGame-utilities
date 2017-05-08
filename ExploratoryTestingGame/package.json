@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "karma": "karma start",
+    "karma": "export pactmockurl=http://192.168.99.101:1234 && karma start",
     "karma-local": "cd ../PactBroker/ && ./start-broker.sh & cd ../PactMock/ && ./start-mock.sh && cd ../ExploratoryTestingGame/ && sleep 1s && karma start && cd ../PactBroker/ && ./stop-broker.sh && cd ../PactMock/ && ./stop-mock.sh",
     "cypress": "node ./bin/www & cypress run"
   },
